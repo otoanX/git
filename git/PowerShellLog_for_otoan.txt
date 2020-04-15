@@ -1,0 +1,89 @@
+﻿**********************
+Windows PowerShell トランスクリプト開始
+開始時刻: 20200415230327
+ユーザー名: DESKTOP-E2K205O\Naoto
+RunAs ユーザー: DESKTOP-E2K205O\Naoto
+構成名: 
+コンピューター: DESKTOP-E2K205O (Microsoft Windows NT 10.0.18363.0)
+ホスト アプリケーション: C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe
+プロセス ID: 1960
+PSVersion: 5.1.18362.628
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.18362.628
+BuildVersion: 10.0.18362.628
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+トランスクリプトが開始されました。出力ファイル: PowerShellLog_for_otoan.txt
+設定は notepad ＄profile で変更できるよ！
+ssh:ssh -l pi 192.168.137.95
+conda: condaini
+PS C:\Users\Naoto\git> git checkout develop
+error: pathspec 'develop' did not match any file(s) known to git
+PS C:\Users\Naoto\git> git fetch
+
+PS C:\Users\Naoto\git> git remote add origin https://github.com/otoanX/hello-world.git
+fatal: remote origin already exists.
+PS C:\Users\Naoto\git> git add git-sandbox
+
+PS C:\Users\Naoto\git> git status
+
+PS C:\Users\Naoto\git> git add engineer/
+
+PS C:\Users\Naoto\git> git rm --cached engineer
+
+PS C:\Users\Naoto\git> git reset HEAD
+
+PS C:\Users\Naoto\git> got add .\study_of_deeplearning_with_keras\
+got : 用語 'got' は、コマンドレット、関数、スクリプト ファイル、または操作可能なプログラムの名前として認識されません。名前が正しく記述されていることを確認し、パスが含まれている場合はそのパスが正しいことを確認してから、再試行し
+てください。
+発生場所 行:1 文字:1
++ got add .\study_of_deeplearning_with_keras\
++ ~~~
+    + CategoryInfo          : ObjectNotFound: (got:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+got : 用語 'got' は、コマンドレット、関数、スクリプト ファイル、または操作可能
+なプログラムの名前として認識されません。名前が正しく記述されていることを確認し
+、パスが含まれている場合はそのパスが正しいことを確認してから、再試行してくださ
+い。
+発生場所 行:1 文字:1
++ got add .\study_of_deeplearning_with_keras\
++ ~~~
+    + CategoryInfo          : ObjectNotFound: (got:String) [], CommandNotFoun
+   dException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\Naoto\git> git add .\study_of_deeplearning_with_keras\
+
+PS C:\Users\Naoto\git> git gui
+
+PS C:\Users\Naoto\git> git init
+
+PS C:\Users\Naoto\git> git add -A
+
+PS C:\Users\Naoto\git> git add -A
+
+PS C:\Users\Naoto\git> git rm engineer
+
+PS C:\Users\Naoto\git> git rm engineer
+
+PS C:\Users\Naoto\git> git init
+
+PS C:\Users\Naoto\git> git add -A
+
+PS C:\Users\Naoto\git> git commit -m "backup"
+
+PS C:\Users\Naoto\git> git remote add origin https://github.com/otoanX/backup.git
+
+PS C:\Users\Naoto\git> git push -u origin master
+
+PS C:\Users\Naoto\git> git remote -v
+
+PS C:\Users\Naoto\git> git remote set-url origin https://github.com/otoanX/backup.git
+
+PS C:\Users\Naoto\git> git remote -v
+
+PS C:\Users\Naoto\git> git push -u origin master
+
