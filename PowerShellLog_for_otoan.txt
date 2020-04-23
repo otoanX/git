@@ -1,0 +1,24 @@
+﻿**********************
+Windows PowerShell トランスクリプト開始
+開始時刻: 20200423221729
+ユーザー名: DESKTOP-E2K205O\Naoto
+RunAs ユーザー: DESKTOP-E2K205O\Naoto
+構成名: 
+コンピューター: DESKTOP-E2K205O (Microsoft Windows NT 10.0.18363.0)
+ホスト アプリケーション: C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe
+プロセス ID: 9228
+PSVersion: 5.1.18362.752
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.18362.752
+BuildVersion: 10.0.18362.752
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+トランスクリプトが開始されました。出力ファイル: PowerShellLog_for_otoan.txt
+設定は notepad ＄profile で変更できるよ！
+ssh:ssh -l pi 192.168.137.95
+conda: condaini
+PS C:\Users\Naoto\git> & C:/Python37/python.exe c:/Users/Naoto/git/keras_vae/keras_vae.py
+- val_loss: 150.4842
