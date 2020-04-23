@@ -1,0 +1,22 @@
+{
+    # 任意の名前でOKです。
+    "name": "Existing Docker Compose (Extend)",
+   
+    # Remoteでログインしたいコンテナを作成するためのdocker-composeファイルを指定してください。
+    "dockerComposeFile": [
+      "../docker-compose.yml",
+    ],
+   
+    # 先程指定したdocker-composeファイル内に定義しているサービスで
+    # 起動したいものを指定してください。
+    "service": "php",
+    # コンテナに入ったときに最初にここで指定したものがカレントディレクトリになります。。
+    "workspaceFolder": "/var/www/html",
+    # コンテナが生成されたときに、コンテナ側にインストールする拡張機能です。
+    # これを指定しないと、コンテナが再生成すると拡張機能が消えます。
+    # 今回はXdebugとPHP IntelliSenseをインストールします。
+    "extensions": [
+      "felixfbecker.php-debug",
+      "felixfbecker.php-intellisense"
+    ]
+  }
