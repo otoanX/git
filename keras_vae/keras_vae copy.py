@@ -35,6 +35,7 @@ import matplotlib.pyplot as plt
 import argparse
 import os
 
+#import watchdog #更新したファイルを取得する
 
 # reparameterization trick
 # instead of sampling from Q(z|X), sample epsilon = N(0,I)
@@ -128,6 +129,14 @@ x_test = np.reshape(x_test, [-1, original_dim])
 x_train = x_train.astype('float32') / 255
 x_test = x_test.astype('float32') / 255
 
+'''
+# GCAI用
+image = np.array(Image.open('./img/rabbit.jpg')) #画像インポート
+#image = np.array(Image.open('./img/rabbit.jpg').convert('L')) #白黒で画像インポート
+#Image.fromarray(image).save('./img/rabbit2.jpg') #画像を保存
+
+'''
+
 # network parameters
 input_shape = (original_dim, )
 intermediate_dim = 512  #中間層の数
@@ -138,7 +147,7 @@ epochs = 50
 # VAE model = encoder + decoder
 # build encoder model
 inputs = Input(shape=input_shape, name='encoder_input') #kerasのINPUTレイヤー
-x = Dense(intermediate_dim, activation='relu')(inputs)
+x = Dense(intermediate_dim, activation='relu')(inputs) #Dense:kerasの全結合ニューラルネットワークレイヤー
 z_mean = Dense(latent_dim, name='z_mean')(x)
 z_log_var = Dense(latent_dim, name='z_log_var')(x)
 
