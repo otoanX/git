@@ -207,7 +207,7 @@
   pi@raspberrypi:~/Downloads/Chinachu $ echo [] > rules.json
   pi@raspberrypi:~/Downloads/Chinachu $ cp config.sample.json config.json
   pi@raspberrypi:~/Downloads/Chinachu $ vim config.json
-  # `"uid": "pi",` `"recorderdDir": "/mnt/nas/recorded/"` へ変更
+  # `"uid": "pi",` `"recorderdDir": "/mnt/hdd/recorded/"` へ変更
     ```
   * Chinachu の起動と自動起動。前後に sudo reboot して再起動しておくと良い。
   ```
@@ -251,22 +251,34 @@
   /dev/sda1: LABEL="EC-PHU3" UUID="A6761F43761F13A1" TYPE="ntfs" PARTUUID="7a469053-01"
   ```
 * /etc/fstabに以下を追記。
+  ```Bash
+  sudo vi /etc/fstab
   ```
+  ```txt:fstab
   UUID="A6761F43761F13A1" /mnt/hdd ntfs-3g defaults,nofail 0       0
   ```
-
-* sambaをインストールする
+* ntfs-3gをインストールして再起動する
   ```
+  sudo apt update
+  sudo apt install ntfs-3g
+  sudo reboot
+  ```
+* マウントされているか確認する
+  ```
+  sudo ls /mnt/
+  ```
+* sambaをインストールする
+  ```Bash
   sudo apt-get update
   sudo apt-get upgrade
   sudo apt-get install samba
   ```
 * Sambaの設定ファイルに追記する
-  ```
+  ```Bash
   sudo cp /etc/samba/smb.conf /etc/samba/smb.conf_backup
   sudo vi /etc/samba/smb.conf
   ```
-  ```
+  ```txt:/etc/samba/smb.conf
   [share]
   comment = Share
   path = /mnt/hdd
@@ -276,12 +288,12 @@
   force user = pi
   ```
 * confファイルのチェック
-  ```
+  ```Bash
   testparm
 
   Loaded services file OK.と出ればOK
   ```
 * Sambaサービスの再起動
-  ```
+  ```Bash
   sudo systemctl restart smbd
   ```
