@@ -70,19 +70,19 @@
 
 ## システム時刻を合わせる
 * 現在時刻を表示するコマンド
-  ```
+  ```Bash
   date
   ```
 * 時刻を日本に合わせる
-  ```
+  ```Bash
   sudo timedatectl set-timezone Asia/Tokyo
   ```
 * 起動時にシステム時刻を変更する
-  ```
+  ```Bash
   cd /etc/init.d/
   sudo vi autorun_date
   ```
-  ```
+  ```txt:autorun_date
   #!/bin/sh
   ### BEGIN INIT INFO
   # Provides: mathkernel
@@ -93,21 +93,34 @@
   # Short-Description: mathkernel
   ### END INIT INFO
 
+  #下記を追加
   #システム時刻を日本に合わせる
   sudo timedatectl set-timezone Asia/Tokyo
   ```
 * スクリプトに実行権限を与える
-  ```
+  ```Bash
   sudo chmod 755 autorun_date
   ```
 * スクリプトが自動実行するようにシステムに登録する
-  ```
+  ```Bash
   sudo update-rc.d autorun_date defaults
   ```
 * 再起動
-  ```
+  ```Bash
   sudo reboot
   ```
+
+## Quimat 3.5インチタッチスクリーン
+<strike>
+
+* タッチパネルドライバーをインストールする(インストール後自動で再起動)
+  ```Bash
+  $ git clone https://github.com/goodtft/LCD-show.git
+  $ chmod -R 755 LCD-show
+  $ cd LCD-show/
+  $ sudo ./MPI3508_480_320-show
+  ```
+</strike>
 
 ## 録画サーバーを構築する for 2020/5/4
 * aptリポジトリ一覧を更新

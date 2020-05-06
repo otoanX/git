@@ -17,18 +17,26 @@ Keras で変分オートエンコーダ（VAE）をMNISTでやってみる
 http://cedro3.com/ai/vae/
 Keras VAEの画像異常検出を理解する
 http://cedro3.com/ai/keras-vae-anomaly/
+python で yes/no で実行する/しないの処理のメモ
+https://cortyuming.hateblo.jp/entry/2015/12/26/085736
+Keras で変分オートエンコーダ（VAE）をセレブの顔画像でやってみる
+http://cedro3.com/ai/keras-vae-celeba/
 '''
 
 from __future__ import absolute_import
 from __future__ import division
 from __future__ import print_function
 
-from keras.layers import Lambda, Input, Dense
+from keras.layers import Dense, Input
+from keras.layers import Conv2D, Flatten, Lambda
+from keras.layers import Reshape, Conv2DTranspose
 from keras.models import Model
 from keras.datasets import mnist
 from keras.losses import mse, binary_crossentropy
-from keras.utils import plot_model
+from keras.utils import plot_model, np_utils   ### 追加
 from keras import backend as K
+from keras.preprocessing.image import array_to_img, img_to_array, load_img  ###　追加
+from sklearn.model_selection import train_test_split  ### 追加
 
 import numpy as np
 import matplotlib.pyplot as plt
@@ -56,7 +64,6 @@ def sampling(args):
     # by default, random_normal has mean = 0 and std = 1.0
     epsilon = K.random_normal(shape=(batch, dim))
     return z_mean + K.exp(0.5 * z_log_var) * epsilon
-
 
 def plot_results(models,
                  data,
@@ -119,34 +126,83 @@ def plot_results(models,
     plt.savefig(filename)
     plt.show()
 
+def list_pictures(directory, ext='jpg|jpeg|bmp|png|ppm'):
+    return [os.path.join(root, f)
+            for root, _, files in os.walk(directory) for f in files
+            if re.match(r'([\w]+\.(?:' + ext + '))', f.lower())]
 
-# MNIST dataset
-(x_train, y_train), (x_test, y_test) = mnist.load_data()
-image_size = x_train.shape[1]
-original_dim = image_size * image_size
-x_train = np.reshape(x_train, [-1, original_dim])
-x_test = np.reshape(x_test, [-1, original_dim])
-x_train = x_train.astype('float32') / 255
-x_test = x_test.astype('float32') / 255
+def yes_no_input():
+    while True:
+        choice = raw_input("Please respond with 'yes' or 'no' [y/N]: ").lower()
+        if choice in ['y', 'ye', 'yes']:
+            return True
+        elif choice in ['n', 'no']:
+            return False
 
-'''
-# GCAI用
-image = np.array(Image.open('./img/rabbit.jpg')) #画像インポート
-#image = np.array(Image.open('./img/rabbit.jpg').convert('L')) #白黒で画像インポート
-#Image.fromarray(image).save('./img/rabbit2.jpg') #画像を保存
+print("Use MNIST dataset? If you don't use,save 64x64images in ./images/")
+if yes_no_input():
+    # MNIST dataset
+    (x_train, y_train), (x_test, y_test) = mnist.load_data()
+    image_size = x_train.shape[1]
+    image_color = 1
+    #original_dim = image_size * image_size
+    #x_train = np.reshape(x_train, [-1, original_dim])
+    #x_test = np.reshape(x_test, [-1, original_dim])
+    x_train = np.reshape(x_train, [-1, image_size,image_size])
+    x_test = np.reshape(x_test, [-1, image_size,image_size])
+    x_train = x_train.astype('float32') / 255
+    x_test = x_test.astype('float32') / 255
+else:
+    # 自作データセット読み込み
+    x = []
+    y = []
+    image_size = 64 # kerasのload_imgで変換する画像サイズ
+    image_color = 3
+    #original_dim = 12288
+    files = os.listdir("./images")
+    files_dir = [f for f in files if os.path.isdir(os.path.join("./images", f))]
+    for i,path in enumerate(files_dir,0):
+        for picture in list_pictures(path):
+            img = img_to_array(load_img(picture, target_size=(image_size,image_size)))  
+            x.append(img)
+            y.append(i)
 
-'''
+    x = np.asarray(x)
+    y = np.asarray(y)
+
+    x = x.astype('float32')
+    x = x/ 255.0    #正規化
+    y = np_utils.to_categorical(y, len(files_dir))   #ラベルをベクトルに変換 
+
+    x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.2, random_state=111)  #データを学習用80%評価用20%に分ける
+
 
 # network parameters
-input_shape = (original_dim, )
-intermediate_dim = 512  #中間層の数
+input_shape = (image_size,image_size,image_color)
+intermediate_dim = 16  #中間層の数
 batch_size = 128
+kernel_size = 3
+filters = 32 #16→32に変更
 latent_dim = 2  #潜在変数の次元数？latent：潜在
 epochs = 50
 
 # VAE model = encoder + decoder
 # build encoder model
 inputs = Input(shape=input_shape, name='encoder_input') #kerasのINPUTレイヤー
+x = inputs
+for i in range(3):   ### 2 → 3 に変更
+    filters *= 2    
+    x = Conv2D(filters=filters,
+               kernel_size=kernel_size,
+               activation='relu',
+               strides=2,
+               padding='same')(x)
+ 
+# shape info needed to build decoder model
+shape = K.int_shape(x)
+ 
+# generate latent vector Q(z|X)
+x = Flatten()(x)
 x = Dense(intermediate_dim, activation='relu')(inputs) #Dense:kerasの全結合ニューラルネットワークレイヤー
 z_mean = Dense(latent_dim, name='z_mean')(x)
 z_log_var = Dense(latent_dim, name='z_log_var')(x)
@@ -160,17 +216,31 @@ z = Lambda(sampling, output_shape=(latent_dim,), name='z')([z_mean, z_log_var])
 # 上で設計したモデルをインスタンス化(具現化)して使えるようにする
 encoder = Model(inputs, [z_mean, z_log_var, z], name='encoder')
 encoder.summary()   # モデルの要約を出力する
-plot_model(encoder, to_file='vae_mlp_encoder.png', show_shapes=True)
+#plot_model(encoder, to_file='vae_mlp_encoder.png', show_shapes=True)
 
 # build decoder model
 latent_inputs = Input(shape=(latent_dim,), name='z_sampling')
-x = Dense(intermediate_dim, activation='relu')(latent_inputs)
-outputs = Dense(original_dim, activation='sigmoid')(x)
+#x = Dense(intermediate_dim, activation='relu')(latent_inputs)
+#outputs = Dense(original_dim, activation='sigmoid')(x)
+x = Dense(shape[1] * shape[2] * shape[3], activation='relu')(latent_inputs)
+x = Reshape((shape[1], shape[2], shape[3]))(x)
+for i in range(3):   ###　2 → 3 に変更
+    x = Conv2DTranspose(filters=filters,
+                        kernel_size=kernel_size,
+                        activation='relu',
+                        strides=2,
+                        padding='same')(x)
+    filters //= 2
+outputs = Conv2DTranspose(filters=3,                 ### 1 → 3 に変更
+                          kernel_size=kernel_size,
+                          activation='sigmoid',
+                          padding='same',
+                          name='decoder_output')(x)
 
 # instantiate decoder model
 decoder = Model(latent_inputs, outputs, name='decoder')
 decoder.summary()   # モデルの要約を出力する
-plot_model(decoder, to_file='vae_mlp_decoder.png', show_shapes=True)
+#plot_model(decoder, to_file='vae_mlp_decoder.png', show_shapes=True)
 
 # instantiate VAE model
 outputs = decoder(encoder(inputs)[2])
