@@ -4,7 +4,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 from PIL import Image   #画像表示
-import OS
+import os
 
 #「Qiita」One Class SVMを使ってMNISTの数字画像の異常検知がしたい@satoshi_y
 # https://qiita.com/satoshi_y/items/5573cacb64168a7a73ed
@@ -16,7 +16,7 @@ from sklearn import svm
 #System.IO.FileSystemWatcherによるフォルダ監視
 #「日曜プログラマーの休日」フォルダ、ファイルの変更を監視する
 #http://www.ops.dti.ne.jp/ironpython.beginner/FileSystemWatcher.html
-import System
+#import System
 from System.IO import FileSystemWatcher
 from System.IO.NotifyFilters import FileName, DirectoryName, LastWrite
 from System.IO.WatcherChangeTypes import All
@@ -65,17 +65,17 @@ def fileadd_check():
         #Security	ファイルまたはフォルダのセキュリティ設定。
         #Size	ファイルまたはフォルダのサイズ。
 
-if __name__ = "__main__":
+if __name__ == "__main__" :
     train_data = imageopen()
 
-    svm = Oneclasssvm()
-    svm.fix(train_data)
+    oneclasssvm = Oneclasssvm()
+    oneclasssvm.fix(train_data)
 
     fileadd_check() #System.IO.FileSystemWatcherを使った監視の設定
     try:    #例外(実行中のエラー)が無いときの処理
         while true:
             changedResult = watch.WaitForChanged(All,1) #監視開始(監視時間はミリ秒。-1で無限。)
             if changedResult.ChangeType == Created:
-                pred = oneclasssvm_pred(changedResult.Name.ToString())
+                pred = oneclasssvm.pred(changedResult.Name.ToString())
     except KeyboardInterrupt:   #Ctrl+Cが押されたときの処理
         print("監視を終了します")
