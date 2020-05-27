@@ -3,6 +3,8 @@
 
 import numpy as np
 import matplotlib.pyplot as plt
+from PIL import Image   #画像表示
+import OS
 
 #「Qiita」One Class SVMを使ってMNISTの数字画像の異常検知がしたい@satoshi_y
 # https://qiita.com/satoshi_y/items/5573cacb64168a7a73ed
@@ -18,15 +20,33 @@ import System
 from System.IO import FileSystemWatcher
 from System.IO.NotifyFilters import FileName, DirectoryName, LastWrite
 from System.IO.WatcherChangeTypes import All
-from System.IO.WatcherChangeTypes import Created, Changed, Renamed,　Deleted
+from System.IO.WatcherChangeTypes import Created, Changed, Renamed, Deleted
 
-def oneclasssvm_fix(train_data):
-	clf = svm.OneClassSVM(nu=0.2, kernel="rbf", gamma=0.001)    #分類器宣言
-	clf.fit(train_data) #学習実施
-    return clf  #clfは分類器の略
+def imageopen():
+    for file in os.listdir():
+        base, ext = os.path.splitext(file)
+        if ext == '.jpg':
+            #print('file:{},ext:{}'.format(file,ext))
+            print(file)
+            image += np.array(Image.open(file))
+    image = converter(image,1,1,784)
+    return image
 
-def oneclasssvm_pred(test_data):
-    pred = clf.predict(test_data)   #予測実施
+def converter(xarray, yarray, num, outputnum):
+	#numで指定されたラベルの値の該当するデータを抽出し，成形する
+	xarray = xarray[np.where(yarray == num)[0]]
+	xarray = xarray.astype('float32') / 255.0
+	xarray = np.reshape(xarray, (len(xarray),outputnum))
+	return xarray
+
+class Oneclasssvm:
+def fix(self,train_data):
+    self.train_data = train_data
+	clf = svm.OneClassSVM(nu=0.2, kernel="rbf", gamma=0.001)    #分類器宣言#clfは分類器の略
+	clf.fit(self.train_data) #学習実施
+def pred(self,test_data):
+    self.test_data = test_data
+    pred = clf.predict(self.test_data)   #予測実施
     return pred #予測結果を返す
 
 def fileadd_check():
@@ -46,6 +66,11 @@ def fileadd_check():
         #Size	ファイルまたはフォルダのサイズ。
 
 if __name__ = "__main__":
+    train_data = imageopen()
+
+    svm = Oneclasssvm()
+    svm.fix(train_data)
+
     fileadd_check() #System.IO.FileSystemWatcherを使った監視の設定
     try:    #例外(実行中のエラー)が無いときの処理
         while true:
