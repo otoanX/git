@@ -40,14 +40,14 @@ def converter(xarray, yarray, num, outputnum):
 	return xarray
 
 class Oneclasssvm:
-def fix(self,train_data):
-    self.train_data = train_data
-	clf = svm.OneClassSVM(nu=0.2, kernel="rbf", gamma=0.001)    #分類器宣言#clfは分類器の略
-	clf.fit(self.train_data) #学習実施
-def pred(self,test_data):
-    self.test_data = test_data
-    pred = clf.predict(self.test_data)   #予測実施
-    return pred #予測結果を返す
+    def fix(self,train_data):
+        self.train_data = train_data
+        clf = svm.OneClassSVM(nu=0.2, kernel="rbf", gamma=0.001)    #分類器宣言#clfは分類器の略
+        clf.fit(self.train_data) #学習実施
+    def pred(self,test_data):
+        self.test_data = test_data
+        pred = clf.predict(self.test_data)   #予測実施
+        return pred #予測結果を返す
 
 def fileadd_check():
     watch = FileSystemWatcher()
