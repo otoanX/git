@@ -1,0 +1,1742 @@
+<!DOCTYPE html>
+<!-- saved from url=(0158)http://lyncs.hateblo.jp/entry/2018/03/11/032127#1-%E3%82%B3%E3%83%B3%E3%83%91%E3%82%A4%E3%83%A9%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB -->
+<html lang="ja" data-admin-domain="//blog.hatena.ne.jp" data-admin-origin="https://blog.hatena.ne.jp" data-author="lyncs" data-avail-langs="ja en" data-blog="lyncs.hateblo.jp" data-blog-host="lyncs.hateblo.jp" data-blog-is-public="1" data-blog-name="LYNCSブログ" data-blog-owner="lyncs" data-blog-uri="http://lyncs.hateblo.jp/" data-blog-uuid="10328749687204235197" data-blogs-uri-base="http://lyncs.hateblo.jp" data-brand="hatenablog" data-data-layer="{&quot;hatenablog&quot;:{&quot;brand_tracking_category&quot;:&quot;hatenablog&quot;,&quot;page_id&quot;:&quot;entry&quot;,&quot;admin&quot;:{},&quot;permalink_entry&quot;:{&quot;hour&quot;:&quot;13&quot;,&quot;uri&quot;:&quot;http://lyncs.hateblo.jp/entry/2018/03/11/032127&quot;,&quot;date&quot;:&quot;2019-12-07&quot;,&quot;title&quot;:&quot;2020\u5e74\u7248 C\u8a00\u8a9e/C++ \u5165\u9580\u8005\u306e\u305f\u3081\u306e\u74b0\u5883\u69cb\u7bc9 (Windows\u7de8)&quot;,&quot;author_name&quot;:&quot;lyncs&quot;,&quot;categories&quot;:&quot;HowTo\t\u30d7\u30ed\u30b0\u30e9\u30df\u30f3\u30b0&quot;},&quot;analytics&quot;:{&quot;brand_property_id&quot;:&quot;&quot;,&quot;non_sampling_property_id&quot;:&quot;&quot;,&quot;property_id&quot;:&quot;&quot;,&quot;separated_property_id&quot;:&quot;UA-29716941-21&quot;},&quot;brand&quot;:&quot;hatenablog&quot;,&quot;blog&quot;:{&quot;disable_ads&quot;:&quot;&quot;,&quot;is_responsive_view&quot;:&quot;false&quot;,&quot;name&quot;:&quot;LYNCS\u30d6\u30ed\u30b0&quot;,&quot;is_public&quot;:&quot;true&quot;,&quot;uri&quot;:&quot;http://lyncs.hateblo.jp/&quot;,&quot;enable_ads&quot;:&quot;true&quot;,&quot;lang&quot;:&quot;ja&quot;,&quot;entry_show_footer_related_entries&quot;:&quot;true&quot;,&quot;content_seems_japanese&quot;:&quot;true&quot;,&quot;owner_name&quot;:&quot;lyncs&quot;,&quot;force_pc_view&quot;:&quot;false&quot;,&quot;enable_keyword_link&quot;:&quot;true&quot;,&quot;is_sleeping&quot;:&quot;false&quot;},&quot;pro&quot;:&quot;free&quot;,&quot;router_type&quot;:&quot;blogs&quot;}}" data-device="pc" data-dont-recommend-pro="false" data-global-domain="https://hatenablog.com" data-globalheader-color="b" data-globalheader-type="pc" data-has-touch-view="1" data-page="entry" data-parts-domain="https://hatenablog-parts.com" data-plus-available="" data-pro="false" data-router-type="blogs" data-sentry-dsn="https://03a33e4781a24cf2885099fed222b56d@sentry.io/1195218" data-sentry-environment="production" data-sentry-sample-rate="0.1" data-static-domain="https://cdn.blog.st-hatena.com" data-version="f085ebb5a08843dbe616e808e89268f2" itemscope="" itemtype="http://schema.org/Article" data-initial-state="{}"><head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script async="" src="./2020年版 C言語_C++ 入門者のための環境構築 (Windows編) - LYNCSブログ_files/gtm.js(1).ダウンロード"></script><script type="text/javascript" async="" src="./2020年版 C言語_C++ 入門者のための環境構築 (Windows編) - LYNCSブログ_files/publishertag.prebid.js.ダウンロード"></script><script type="text/javascript" async="" src="./2020年版 C言語_C++ 入門者のための環境構築 (Windows編) - LYNCSブログ_files/audience"></script><script src="./2020年版 C言語_C++ 入門者のための環境構築 (Windows編) - LYNCSブログ_files/sdk.js.ダウンロード" async="" crossorigin="anonymous"></script><script type="text/javascript" async="" src="./2020年版 C言語_C++ 入門者のための環境構築 (Windows編) - LYNCSブログ_files/recaptcha__ja.js.ダウンロード"></script><script async="" src="./2020年版 C言語_C++ 入門者のための環境構築 (Windows編) - LYNCSブログ_files/notices.count.json"></script>
+  
+
+  
+
+
+
+  
+
+  <meta name="robots" content="max-image-preview:large">
+
+
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=7; IE=9; IE=10; IE=11">
+  <title>2020年版 C言語/C++ 入門者のための環境構築 (Windows編) - LYNCSブログ</title>
+
+  
+  <link rel="canonical" href="http://lyncs.hateblo.jp/entry/2018/03/11/032127">
+
+
+
+  
+  
+
+<meta itemprop="name" content="2020年版 C言語/C++ 入門者のための環境構築 (Windows編) - LYNCSブログ">
+
+  <meta itemprop="image" content="https://cdn-ak.f.st-hatena.com/images/fotolife/l/lyncs/20180310/20180310042602.png">
+
+
+  <meta property="og:title" content="2020年版 C言語/C++ 入門者のための環境構築 (Windows編) - LYNCSブログ">
+<meta property="og:type" content="article">
+  <meta property="og:url" content="http://lyncs.hateblo.jp/entry/2018/03/11/032127">
+
+  <meta property="og:image" content="https://cdn-ak.f.st-hatena.com/images/fotolife/l/lyncs/20180310/20180310042602.png">
+
+<meta property="og:image:alt" content="2020年版 C言語/C++ 入門者のための環境構築 (Windows編) - LYNCSブログ">
+    <meta property="og:description" content="「C言語/C++言語を始めたいが、環境が構築できていない」「プログラミング自体経験がほとんどない」という方を中心に、C/C++の環境構築を画像つきで解説しています。また、プログラミング入門者に向けて、C/C++以外の言語も紹介しています。">
+<meta property="og:site_name" content="LYNCSブログ">
+
+  <meta property="article:published_time" content="1575693000">
+
+    <meta property="article:tag" content="HowTo">
+    <meta property="article:tag" content="プログラミング">
+      <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://cdn-ak.f.st-hatena.com/images/fotolife/l/lyncs/20180310/20180310042602.png">  <meta name="twitter:title" content="2020年版 C言語/C++ 入門者のための環境構築 (Windows編) - LYNCSブログ">    <meta name="twitter:description" content="「C言語/C++言語を始めたいが、環境が構築できていない」「プログラミング自体経験がほとんどない」という方を中心に、C/C++の環境構築を画像つきで解説しています。また、プログラミング入門者に向けて、C/C++以外の言語も紹介しています。">  <meta name="twitter:app:name:iphone" content="はてなブログアプリ">
+  <meta name="twitter:app:id:iphone" content="583299321">
+  <meta name="twitter:app:url:iphone" content="hatenablog:///open?uri=http%3A%2F%2Flyncs.hateblo.jp%2Fentry%2F2018%2F03%2F11%2F032127">  <meta name="twitter:site" content="@keio_LYNCS">
+  
+    <meta name="description" content="「C言語/C++言語を始めたいが、環境が構築できていない」「プログラミング自体経験がほとんどない」という方を中心に、C/C++の環境構築を画像つきで解説しています。また、プログラミング入門者に向けて、C/C++以外の言語も紹介しています。">
+
+
+  
+<script id="facebook-jssdk" src="./2020年版 C言語_C++ 入門者のための環境構築 (Windows編) - LYNCSブログ_files/sdk.js(1).ダウンロード"></script><script async="" src="./2020年版 C言語_C++ 入門者のための環境構築 (Windows編) - LYNCSブログ_files/gtm.js.ダウンロード"></script><script id="embed-gtm-data-layer-loader" data-data-layer-page-specific="{&quot;hatenablog&quot;:{&quot;blogs_permalink&quot;:{&quot;blog_hide_afc_field&quot;:&quot;false&quot;,&quot;blog_hide_afc_func&quot;:&quot;false&quot;,&quot;brand_hide_afc&quot;:&quot;false&quot;,&quot;blog_struct_hide_afc&quot;:&quot;false&quot;,&quot;is_author_pro&quot;:&quot;false&quot;,&quot;blog_afc_issued&quot;:&quot;false&quot;,&quot;entry_afc_issued&quot;:&quot;false&quot;,&quot;is_blog_sleeping&quot;:&quot;false&quot;,&quot;has_related_entries_with_elasticsearch&quot;:&quot;true&quot;}}}">
+(function() {
+  function loadDataLayer(elem, attrName) {
+    if (!elem) { return {}; }
+    var json = elem.getAttribute(attrName);
+    if (!json) { return {}; }
+    return JSON.parse(json);
+  }
+
+  var globalVariables = loadDataLayer(
+    document.documentElement,
+    'data-data-layer'
+  );
+  var pageSpecificVariables = loadDataLayer(
+    document.getElementById('embed-gtm-data-layer-loader'),
+    'data-data-layer-page-specific'
+  );
+
+  var variables = [globalVariables, pageSpecificVariables];
+
+  if (!window.dataLayer) {
+    window.dataLayer = [];
+  }
+
+  for (var i = 0; i < variables.length; i++) {
+    window.dataLayer.push(variables[i]);
+  }
+})();
+</script>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-P4CXTW');</script>
+<!-- End Google Tag Manager -->
+
+
+
+
+  <link rel="shortcut icon" href="http://lyncs.hateblo.jp/favicon">
+<link rel="apple-touch-icon" href="https://cdn.image.st-hatena.com/image/apple_touch_icon/e573a1cafe5a894fbf812d19b281e915a9b4c799/version=1/https%3A%2F%2Fcdn.user.blog.st-hatena.com%2Fcustom_blog_icon%2F129287161%2F1514226215127674">
+<link rel="icon" sizes="192x192" href="https://cdn.image.st-hatena.com/image/square/fb94f0182023ca2edd41257b78284292020ea40f/backend=imagemagick;height=192;version=1;width=192/https%3A%2F%2Fcdn.user.blog.st-hatena.com%2Fcustom_blog_icon%2F129287161%2F1514226215127674">
+
+  
+
+<link rel="alternate" type="application/atom+xml" title="Atom" href="http://lyncs.hateblo.jp/feed">
+<link rel="alternate" type="application/rss+xml" title="RSS2.0" href="http://lyncs.hateblo.jp/rss">
+<link rel="alternate" type="application/json+oembed" href="https://hatenablog.com/oembed?url=http%3A%2F%2Flyncs.hateblo.jp%2Fentry%2F2018%2F03%2F11%2F032127&amp;format=json" title="oEmbed Profile of 2020年版 C言語/C++ 入門者のための環境構築 (Windows編)">
+<link rel="alternate" type="text/xml+oembed" href="https://hatenablog.com/oembed?url=http%3A%2F%2Flyncs.hateblo.jp%2Fentry%2F2018%2F03%2F11%2F032127&amp;format=xml" title="oEmbed Profile of 2020年版 C言語/C++ 入門者のための環境構築 (Windows編)">
+  
+  <link rel="author" href="http://www.hatena.ne.jp/lyncs/">
+
+  
+
+
+  
+    <link rel="stylesheet" type="text/css" href="./2020年版 C言語_C++ 入門者のための環境構築 (Windows編) - LYNCSブログ_files/blog.css">
+
+    
+  <link rel="stylesheet" type="text/css" href="./2020年版 C言語_C++ 入門者のための環境構築 (Windows編) - LYNCSブログ_files/52ef0eb76ac1906cdca35cd452d2b83ed6a280db">
+  
+
+  
+
+  
+<script> </script><style>@media print {#ghostery-purple-box {display:none !important}}</style>
+
+  
+<style>
+  div#google_afc_user,
+  div.google-afc-user-container,
+  div.google_afc_image,
+  div.google_afc_blocklink {
+      display: block !important;
+  }
+</style>
+
+
+  
+    <script src="./2020年版 C言語_C++ 入門者のための環境構築 (Windows編) - LYNCSブログ_files/valve.js.ダウンロード" async=""></script>
+<script id="test-valve-definition">
+  var valve = window.valve || [];
+
+  valve.push(function(v) {
+    v.config({
+      service: 'blog',
+      content: {
+        result: 'adtrust',
+        documentIds: ["blog:entry:8599973812344536220"]
+      }
+    });
+    v.defineDFPSlot({"lazy":"","sizes":[[300,250],[336,280],[468,60],"fluid"],"slotId":"google_afc_user_container_0","unit":"/4374287/blog_user"});
+    v.sealDFPSlots();
+  });
+</script>
+
+  
+
+  <meta name="google-site-verification" content="aJOuZEbKe8kWmOMv8ooFxdBXVwFwEBBiXEFU_BsXpXw">
+<script type="text/javascript" async="" src="./2020年版 C言語_C++ 入門者のための環境構築 (Windows編) - LYNCSブログ_files/apstag.js.ダウンロード"></script><script type="text/javascript" async="" src="./2020年版 C言語_C++ 入門者のための環境構築 (Windows編) - LYNCSブログ_files/gpt.js.ダウンロード"></script><script charset="utf-8" src="./2020年版 C言語_C++ 入門者のための環境構築 (Windows編) - LYNCSブログ_files/moment_timeline_tweet.99ce5e0e4617985354c5c426d7e1b9f4.js.ダウンロード"></script><script charset="utf-8" src="./2020年版 C言語_C++ 入門者のための環境構築 (Windows編) - LYNCSブログ_files/timeline.d228dcf3573461f298b082c9a5c0a42c.js.ダウンロード"></script><script charset="utf-8" src="./2020年版 C言語_C++ 入門者のための環境構築 (Windows編) - LYNCSブログ_files/button.93a0c25c2d2f3081c705c98c2d9dec0e.js.ダウンロード"></script><style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
+.MathJax_Menu_Button .MathJax_Hover_Arrow {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; -khtml-border-radius: 4px; font-family: 'Courier New',Courier; font-size: 9px; color: #F0F0F0}
+.MathJax_Menu_Button .MathJax_Hover_Arrow span {display: block; background-color: #AAA; border: 1px solid; border-radius: 3px; line-height: 0; padding: 4px}
+.MathJax_Hover_Arrow:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_Hover_Arrow:hover span {background-color: #CCC!important}
+</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_About.MathJax_MousePost {outline: none}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 2px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 2px 2em; background: transparent}
+.MathJax_MenuArrow {position: absolute; right: .5em; padding-top: .25em; color: #666666; font-size: .75em}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuArrow.RTL {left: .5em; right: auto}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuRadioCheck {position: absolute; left: 1em}
+.MathJax_MenuRadioCheck.RTL {right: 1em; left: auto}
+.MathJax_MenuLabel {padding: 2px 2em 4px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #CCCCCC; margin: 4px 1px 0px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: Highlight; color: HighlightText}
+.MathJax_MenuDisabled:focus, .MathJax_MenuLabel:focus {background-color: #E8E8E8}
+.MathJax_ContextMenu:focus {outline: none}
+.MathJax_ContextMenu .MathJax_MenuItem:focus {outline: none}
+#MathJax_AboutClose {top: .2em; right: .2em}
+.MathJax_Menu .MathJax_MenuClose {top: -10px; left: -10px}
+.MathJax_MenuClose {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; font-family: 'Courier New',Courier; font-size: 24px; color: #F0F0F0}
+.MathJax_MenuClose span {display: block; background-color: #AAA; border: 1.5px solid; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; line-height: 0; padding: 8px 0 6px}
+.MathJax_MenuClose:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_MenuClose:hover span {background-color: #CCC!important}
+.MathJax_MenuClose:hover:focus {outline: none}
+</style><style type="text/css">.MathJax_Preview .MJXf-math {color: inherit!important}
+</style><style type="text/css">.MJX_Assistive_MathML {position: absolute!important; top: 0; left: 0; clip: rect(1px, 1px, 1px, 1px); padding: 1px 0 0 0!important; border: 0!important; height: 1px!important; width: 1px!important; overflow: hidden!important; display: block!important; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none}
+.MJX_Assistive_MathML.MJX_Assistive_MathML_Block {width: 100%!important}
+</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomFrame {position: relative; display: inline-block; height: 0; width: 0}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style><style type="text/css">.MathJax_Preview {color: #888}
+#MathJax_Message {position: fixed; left: 1em; bottom: 1.5em; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style><style type="text/css">.MJXp-script {font-size: .8em}
+.MJXp-right {-webkit-transform-origin: right; -moz-transform-origin: right; -ms-transform-origin: right; -o-transform-origin: right; transform-origin: right}
+.MJXp-bold {font-weight: bold}
+.MJXp-italic {font-style: italic}
+.MJXp-scr {font-family: MathJax_Script,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-frak {font-family: MathJax_Fraktur,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-sf {font-family: MathJax_SansSerif,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-cal {font-family: MathJax_Caligraphic,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-mono {font-family: MathJax_Typewriter,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-largeop {font-size: 150%}
+.MJXp-largeop.MJXp-int {vertical-align: -.2em}
+.MJXp-math {display: inline-block; line-height: 1.2; text-indent: 0; font-family: 'Times New Roman',Times,STIXGeneral,serif; white-space: nowrap; border-collapse: collapse}
+.MJXp-display {display: block; text-align: center; margin: 1em 0}
+.MJXp-math span {display: inline-block}
+.MJXp-box {display: block!important; text-align: center}
+.MJXp-box:after {content: " "}
+.MJXp-rule {display: block!important; margin-top: .1em}
+.MJXp-char {display: block!important}
+.MJXp-mo {margin: 0 .15em}
+.MJXp-mfrac {margin: 0 .125em; vertical-align: .25em}
+.MJXp-denom {display: inline-table!important; width: 100%}
+.MJXp-denom > * {display: table-row!important}
+.MJXp-surd {vertical-align: top}
+.MJXp-surd > * {display: block!important}
+.MJXp-script-box > *  {display: table!important; height: 50%}
+.MJXp-script-box > * > * {display: table-cell!important; vertical-align: top}
+.MJXp-script-box > *:last-child > * {vertical-align: bottom}
+.MJXp-script-box > * > * > * {display: block!important}
+.MJXp-mphantom {visibility: hidden}
+.MJXp-munderover {display: inline-table!important}
+.MJXp-over {display: inline-block!important; text-align: center}
+.MJXp-over > * {display: block!important}
+.MJXp-munderover > * {display: table-row!important}
+.MJXp-mtable {vertical-align: .25em; margin: 0 .125em}
+.MJXp-mtable > * {display: inline-table!important; vertical-align: middle}
+.MJXp-mtr {display: table-row!important}
+.MJXp-mtd {display: table-cell!important; text-align: center; padding: .5em 0 0 .5em}
+.MJXp-mtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-mlabeledtr {display: table-row!important}
+.MJXp-mlabeledtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mlabeledtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
+.MJXp-scale0 {-webkit-transform: scaleX(.0); -moz-transform: scaleX(.0); -ms-transform: scaleX(.0); -o-transform: scaleX(.0); transform: scaleX(.0)}
+.MJXp-scale1 {-webkit-transform: scaleX(.1); -moz-transform: scaleX(.1); -ms-transform: scaleX(.1); -o-transform: scaleX(.1); transform: scaleX(.1)}
+.MJXp-scale2 {-webkit-transform: scaleX(.2); -moz-transform: scaleX(.2); -ms-transform: scaleX(.2); -o-transform: scaleX(.2); transform: scaleX(.2)}
+.MJXp-scale3 {-webkit-transform: scaleX(.3); -moz-transform: scaleX(.3); -ms-transform: scaleX(.3); -o-transform: scaleX(.3); transform: scaleX(.3)}
+.MJXp-scale4 {-webkit-transform: scaleX(.4); -moz-transform: scaleX(.4); -ms-transform: scaleX(.4); -o-transform: scaleX(.4); transform: scaleX(.4)}
+.MJXp-scale5 {-webkit-transform: scaleX(.5); -moz-transform: scaleX(.5); -ms-transform: scaleX(.5); -o-transform: scaleX(.5); transform: scaleX(.5)}
+.MJXp-scale6 {-webkit-transform: scaleX(.6); -moz-transform: scaleX(.6); -ms-transform: scaleX(.6); -o-transform: scaleX(.6); transform: scaleX(.6)}
+.MJXp-scale7 {-webkit-transform: scaleX(.7); -moz-transform: scaleX(.7); -ms-transform: scaleX(.7); -o-transform: scaleX(.7); transform: scaleX(.7)}
+.MJXp-scale8 {-webkit-transform: scaleX(.8); -moz-transform: scaleX(.8); -ms-transform: scaleX(.8); -o-transform: scaleX(.8); transform: scaleX(.8)}
+.MJXp-scale9 {-webkit-transform: scaleX(.9); -moz-transform: scaleX(.9); -ms-transform: scaleX(.9); -o-transform: scaleX(.9); transform: scaleX(.9)}
+.MathJax_PHTML .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
+</style><script type="text/javascript" async="" src="./2020年版 C言語_C++ 入門者のための環境構築 (Windows編) - LYNCSブログ_files/itm.js.ダウンロード"></script><script type="text/javascript" async="" src="./2020年版 C言語_C++ 入門者のための環境構築 (Windows編) - LYNCSブログ_files/hatena_bigmining.js.ダウンロード"></script><script src="./2020年版 C言語_C++ 入門者のための環境構築 (Windows編) - LYNCSブログ_files/entries.json" type="text/javascript"></script><style type="text/css">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_reposition{overflow:hidden;position:relative}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, "hiragino kaku gothic pro",meiryo,"ms pgothic",sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}@keyframes fb_transform{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}.fb_animate{animation:fb_transform .3s forwards}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_dialog_advanced{border-radius:8px;padding:10px}.fb_dialog_content{background:#fff;color:#373737}.fb_dialog_close_icon{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{left:5px;right:auto;top:5px}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent}.fb_dialog_close_icon:active{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #365899;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{height:100%;left:0;margin:0;overflow:visible;position:absolute;top:-10000px;transform:none;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{background:none;height:auto;min-height:initial;min-width:initial;width:auto}.fb_dialog.fb_dialog_mobile.loading.centered #fb_dialog_loader_spinner{width:100%}.fb_dialog.fb_dialog_mobile.loading.centered .fb_dialog_content{background:none}.loading.centered #fb_dialog_loader_close{clear:both;color:#fff;display:block;font-size:18px;padding-top:20px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .4);bottom:0;left:0;min-height:100%;position:absolute;right:0;top:0;width:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_mobile .fb_dialog_iframe{position:sticky;top:0}.fb_dialog_content .dialog_header{background:linear-gradient(from(#738aba), to(#2c4987));border-bottom:1px solid;border-color:#043b87;box-shadow:white 0 1px 1px -1px inset;color:#fff;font:bold 14px Helvetica, sans-serif;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:linear-gradient(from(#4267B2), to(#2a4887));background-clip:padding-box;border:1px solid #29487d;border-radius:3px;display:inline-block;line-height:18px;margin-top:3px;max-width:85px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{background:none;border:none;color:#fff;font:bold 12px Helvetica, sans-serif;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #4a4a4a;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f5f6f7;border:1px solid #4a4a4a;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}#fb_dialog_loader_spinner{animation:rotateSpinner 1.2s linear infinite;background-color:transparent;background-image:url(https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/t-wz8gw1xG1.png);background-position:50% 50%;background-repeat:no-repeat;height:24px;width:24px}@keyframes rotateSpinner{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_fluid_desktop,.fb_iframe_widget_fluid_desktop span,.fb_iframe_widget_fluid_desktop iframe{max-width:100%}.fb_iframe_widget_fluid_desktop iframe{min-width:220px;position:relative}.fb_iframe_widget_lift{z-index:1}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}</style><script src="./2020年版 C言語_C++ 入門者のための環境構築 (Windows編) - LYNCSブログ_files/entries(1).json" type="text/javascript"></script></head>
+
+  <body class="page-entry header-image-enable enable-bottom-editarea category-HowTo category-プログラミング" style=""><div id="MathJax_Message" style="display: none;"></div>
+    
+
+    <div id="globalheader-container" data-brand="hatenablog">
+  <iframe id="globalheader" height="37" frameborder="0" allowtransparency="true" src="./2020年版 C言語_C++ 入門者のための環境構築 (Windows編) - LYNCSブログ_files/saved_resource.html"></iframe>
+</div>
+
+
+    <div id="container">
+      <div id="container-inner">
+        <header id="blog-title" data-brand="hatenablog">
+  <div id="blog-title-inner" style="background-image: url(&#39;http://cdn-ak.f.st-hatena.com/images/fotolife/l/lyncs/20170115/20170115055600.jpg&#39;); background-position: center -275px;">
+    <div id="blog-title-content">
+      <h1 id="title"><a href="http://lyncs.hateblo.jp/">LYNCSブログ</a></h1>
+      
+        <h2 id="blog-description">慶應義塾大学公認団体 宇宙科学総合研究会（LYNCS）のブログです。</h2>
+      
+    </div>
+  </div>
+</header>
+
+        
+
+        
+        
+
+
+
+
+<div id="content" class="hfeed">
+  <div id="content-inner">
+    <div id="wrapper">
+      <div id="main">
+        <div id="main-inner">
+          
+
+
+          
+  
+  <!-- google_ad_section_start -->
+  <!-- rakuten_ad_target_begin -->
+  
+  
+  
+
+  
+
+  
+    
+      
+        <article class="entry hentry test-hentry js-entry-article date-first autopagerize_page_element chars-800 words-100 mode-markdown entry-odd" id="entry-8599973812344536220" data-keyword-campaign="" data-uuid="8599973812344536220" data-publication-type="entry">
+  <div class="entry-inner">
+    <header class="entry-header">
+  
+    <div class="date entry-date first">
+    <a href="http://lyncs.hateblo.jp/archive/2019/12/07" rel="nofollow">
+      <time pubdate="" datetime="2019-12-07T04:30:00Z" title="2019-12-07T04:30:00Z">
+        <span class="date-year">2019</span><span class="hyphen">-</span><span class="date-month">12</span><span class="hyphen">-</span><span class="date-day">07</span>
+      </time>
+    </a>
+  </div>
+  <h1 class="entry-title">
+  <a href="http://lyncs.hateblo.jp/entry/2018/03/11/032127" class="entry-title-link bookmark">2020年版 C言語/C++ 入門者のための環境構築 (Windows編)</a>
+</h1>
+
+  
+  
+
+  <div class="entry-categories categories">
+    
+    <a href="http://lyncs.hateblo.jp/archive/category/HowTo" class="entry-category-link category-HowTo">HowTo</a>
+    
+    <a href="http://lyncs.hateblo.jp/archive/category/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0" class="entry-category-link category-プログラミング">プログラミング</a>
+    
+  </div>
+
+
+  
+
+  
+  
+<div class="social-buttons">
+  
+  
+    <div class="social-button-item">
+      <iframe class="hatena-bookmark-button-frame" title="この記事をはてなブックマークに追加" frameborder="0" scrolling="no" width="84" height="40" src="javascript:false" style="width: 84px; height: 40px;" src="./2020年版 C言語_C++ 入門者のための環境構築 (Windows編) - LYNCSブログ_files/saved_resource(1).html"></iframe>
+    </div>
+  
+  
+    <div class="social-button-item">
+      <div class="fb-share-button fb_iframe_widget" data-layout="box_count" data-href="http://lyncs.hateblo.jp/entry/2018/03/11/032127" fb-xfbml-state="rendered" fb-iframe-plugin-query="app_id=719729204785177&amp;container_width=0&amp;href=http%3A%2F%2Flyncs.hateblo.jp%2Fentry%2F2018%2F03%2F11%2F032127&amp;layout=box_count&amp;locale=ja_JP&amp;sdk=joey"><span style="vertical-align: bottom; width: 69px; height: 40px;"><iframe name="f1fff50adbcc58" width="1000px" height="1000px" data-testid="fb:share_button Facebook Social Plugin" title="fb:share_button Facebook Social Plugin" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" src="./2020年版 C言語_C++ 入門者のための環境構築 (Windows編) - LYNCSブログ_files/share_button.html" style="border: none; visibility: visible; width: 69px; height: 40px;" class=""></iframe></span></div>
+    </div>
+  
+  
+    <div class="social-button-item">
+      <iframe id="twitter-widget-1" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" class="twitter-share-button twitter-share-button-rendered twitter-tweet-button" style="position: static; visibility: visible; width: 75px; height: 20px;" title="Twitter Tweet Button" src="./2020年版 C言語_C++ 入門者のための環境構築 (Windows編) - LYNCSブログ_files/tweet_button.6787510241df65d128e2b60207ad4c25.ja.html" data-url="http://lyncs.hateblo.jp/entry/2018/03/11/032127"></iframe>
+    </div>
+  
+  
+  
+    <span>
+      <iframe data-type="share-e" data-lang="ja" data-line-it-id="0" scrolling="no" frameborder="0" allowtransparency="true" class="line-it-button" src="./2020年版 C言語_C++ 入門者のための環境構築 (Windows編) - LYNCSブログ_files/share.html" style="width: 36px; height: 60px; visibility: visible; position: static;" title="このページの情報をLINEでシェアできます。"></iframe>
+      <script src="./2020年版 C言語_C++ 入門者のための環境構築 (Windows編) - LYNCSブログ_files/loader.min.js.ダウンロード" async="async" defer="defer"></script>
+    </span>
+  
+  
+    <div class="social-button-item">
+      <a data-pocket-label="pocket" data-save-url="http://lyncs.hateblo.jp/entry/2018/03/11/032127" data-pocket-count="vertical" class="pocket-btn" data-lang="en"></a>
+    </div>
+  
+</div>
+
+
+
+</header>
+
+    
+
+
+    <div class="entry-content">
+  
+    <ul class="table-of-contents">
+    <li><a href="http://lyncs.hateblo.jp/entry/2018/03/11/032127#%E5%AF%BE%E8%B1%A1%E3%81%A8%E3%81%AA%E3%82%8B%E8%AA%AD%E8%80%85">対象となる読者</a><ul>
+            <li><a href="http://lyncs.hateblo.jp/entry/2018/03/11/032127#%E3%81%93%E3%81%AE%E8%A8%98%E4%BA%8B%E3%82%92%E6%9B%B8%E3%81%84%E3%81%9F%E7%90%86%E7%94%B1">この記事を書いた理由</a></li>
+        </ul>
+    </li>
+    <li><a href="http://lyncs.hateblo.jp/entry/2018/03/11/032127#%E3%81%BE%E3%81%9A%E6%9C%AC%E5%BD%93%E3%81%ABCC%E3%81%8B%E3%82%89%E5%85%A5%E9%96%80%E3%81%97%E3%81%A6%E5%A4%A7%E4%B8%88%E5%A4%AB">まず、本当にC/C++から入門して大丈夫？</a><ul>
+            <li><a href="http://lyncs.hateblo.jp/entry/2018/03/11/032127#CC%E3%81%8C%E5%90%91%E3%81%84%E3%81%A6%E3%81%84%E3%81%AA%E3%81%84%E3%81%AA%E3%82%89%E4%BD%95%E3%81%AE%E8%A8%80%E8%AA%9E%E3%82%92%E9%81%B8%E3%81%B9%E3%81%B0%E3%81%84%E3%81%84%E3%81%AE">C/C++が向いていないなら何の言語を選べばいいの？</a></li>
+            <li><a href="http://lyncs.hateblo.jp/entry/2018/03/11/032127#%E9%80%86%E3%81%AB%E3%81%A9%E3%81%86%E3%81%84%E3%81%86%E4%BA%BA%E3%81%AFCC%E3%81%8B%E3%82%89%E5%A7%8B%E3%82%81%E3%82%8B%E3%81%A8%E3%81%84%E3%81%84%E3%81%AE">逆にどういう人はC/C++から始めるといいの？</a></li>
+        </ul>
+    </li>
+    <li><a href="http://lyncs.hateblo.jp/entry/2018/03/11/032127#1-%E3%82%B3%E3%83%B3%E3%83%91%E3%82%A4%E3%83%A9%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB">1. コンパイラのインストール</a></li>
+    <li><a href="http://lyncs.hateblo.jp/entry/2018/03/11/032127#2-%E3%83%91%E3%82%B9%E3%82%92%E9%80%9A%E3%81%99">2. パスを通す</a></li>
+    <li><a href="http://lyncs.hateblo.jp/entry/2018/03/11/032127#3-%E6%8B%A1%E5%BC%B5%E5%AD%90%E3%81%AE%E8%A1%A8%E7%A4%BA">3. 拡張子の表示</a></li>
+    <li><a href="http://lyncs.hateblo.jp/entry/2018/03/11/032127#4-%E3%82%A8%E3%83%87%E3%82%A3%E3%82%BF%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB">4. エディタのインストール</a></li>
+    <li><a href="http://lyncs.hateblo.jp/entry/2018/03/11/032127#5-%E3%82%B3%E3%83%BC%E3%83%89%E3%82%92%E6%9B%B8%E3%81%84%E3%81%A6%E5%AE%9F%E8%A1%8C%E3%81%97%E3%81%A6%E3%81%84%E3%81%8F">5. コードを書いて実行していく</a></li>
+    <li><a href="http://lyncs.hateblo.jp/entry/2018/03/11/032127#LYNCS-%E3%81%A8%E3%81%AF">LYNCS とは？</a></li>
+</ul>
+
+<ul>
+<li>初版:2018-03-11</li>
+<li>改訂:2019-12-07</li>
+</ul>
+
+
+<h2 id="対象となる読者">対象となる読者</h2>
+
+<ul>
+<li><a class="keyword" href="http://d.hatena.ne.jp/keyword/C%B8%C0%B8%EC">C言語</a>/<a class="keyword" href="http://d.hatena.ne.jp/keyword/C%2B%2B">C++</a>言語を始めたいが、環境が構築できていない
+
+<ul>
+<li>大学の授業などで<a class="keyword" href="http://d.hatena.ne.jp/keyword/C%B8%C0%B8%EC">C言語</a>を学習する必要がある人もこれに含みます</li>
+</ul>
+</li>
+<li>プログラミング自体経験がほとんどない</li>
+<li>PCの基本操作は理解している</li>
+</ul>
+
+
+<h3 id="この記事を書いた理由">この記事を書いた理由</h3>
+
+<p>LYNCSでは、<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%DE%A5%A4%A5%B3%A5%F3">マイコン</a>を用いたロボット等の制御に<a class="keyword" href="http://d.hatena.ne.jp/keyword/C%2B%2B">C++</a>が使われることがあるため、プログラミング初心者でも<a class="keyword" href="http://d.hatena.ne.jp/keyword/C/C%2B%2B">C/C++</a>から入る層が一定数居ます。
+また、大学の<a class="keyword" href="http://d.hatena.ne.jp/keyword/%B0%EC%C8%CC%B6%B5%CD%DC%B2%CA%CC%DC">一般教養科目</a>として開講されるプログラミングの授業では、<a class="keyword" href="http://d.hatena.ne.jp/keyword/C%B8%C0%B8%EC">C言語</a>を学ぶものもあります。
+そういった状況を想定して、<strong>環境構築でつまづくことなく、言語の学習に集中できる</strong>一助となる記事を書きたいと思った次第です。</p>
+
+<h2 id="まず本当にCCから入門して大丈夫">まず、本当に<a class="keyword" href="http://d.hatena.ne.jp/keyword/C/C%2B%2B">C/C++</a>から入門して大丈夫？</h2>
+
+<p>あくまで筆者個人の考えですが、初心者が<strong>最初に学ぶ</strong>言語として<strong>安易に</strong><a class="keyword" href="http://d.hatena.ne.jp/keyword/C/C%2B%2B">C/C++</a>を選ぶのは良くありません。もちろん、理由や信念があって<a class="keyword" href="http://d.hatena.ne.jp/keyword/C/C%2B%2B">C/C++</a>を学ぶのであれば全く問題はありません。</p>
+
+<p>ここに辿り着いた方のうち、<a class="keyword" href="http://d.hatena.ne.jp/keyword/C/C%2B%2B">C/C++</a>を学ぶ<strong>動機・理由が明確な方は次のセクションまですっ飛ばして環境構築を始めてください</strong>。逆に、プログラミングというものが何かはよく分からないけど触ってみたい方や、ゲームや<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%B9%A5%DE%A5%DB">スマホ</a>のアプリなど何か作りたいものがあるという方はこれからの文章を読むことをおすすめします。</p>
+
+<p><a class="keyword" href="http://d.hatena.ne.jp/keyword/C%B8%C0%B8%EC">C言語</a>はOSの開発や<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%D7%A5%ED%A5%B0%A5%E9%A5%DF%A5%F3%A5%B0%B8%C0%B8%EC">プログラミング言語</a>自体の開発などには欠かせない存在で、とても重要な言語であることは事実です。
+しかし、ゲームや<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%B9%A5%DE%A5%DB">スマホ</a>アプリ、Webアプリ、<a class="keyword" href="http://d.hatena.ne.jp/keyword/%BF%CD%B9%A9%C3%CE%C7%BD">人工知能</a>（AI）などを開発したい場合には不向きな言語です。世の中には、それらに最適な言語が数多く存在しています。
+そういった言語などがあるのにあえて<a class="keyword" href="http://d.hatena.ne.jp/keyword/C%B8%C0%B8%EC">C言語</a>を使うのは、新幹線があることを知りながら自転車で東京-京都間を往復するようなものです。</p>
+
+<p>さらに、作りたいものが作りづらいだけでなく、<a class="keyword" href="http://d.hatena.ne.jp/keyword/C/C%2B%2B">C/C++</a>にはとても難解な概念が登場します。つまり<strong>「初心者殺し」でありながら、言語を習得したところで初心者にも作りやすいアプリを作れない</strong>という、プログラミング学習の挫折につながりやすい言語なので、特に理由がない限りはCを「最初に学ぶ<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%D7%A5%ED%A5%B0%A5%E9%A5%DF%A5%F3%A5%B0%B8%C0%B8%EC">プログラミング言語</a>」として選ぶことはおすすめしません。漠然と<a class="keyword" href="http://d.hatena.ne.jp/keyword/C/C%2B%2B">C/C++</a>を最初の言語として選ぶと、殆どの人はプログラミングに対する苦手意識を持ってしまうだけだと思います。逆に、何かしらの言語を学んだあとに<a class="keyword" href="http://d.hatena.ne.jp/keyword/C/C%2B%2B">C/C++</a>を学ぶと、あらゆる<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%D7%A5%ED%A5%B0%A5%E9%A5%DF%A5%F3%A5%B0%B8%C0%B8%EC">プログラミング言語</a>に共通する一般的な事柄はスキップして<a class="keyword" href="http://d.hatena.ne.jp/keyword/C/C%2B%2B">C/C++</a>固有の難しい概念だけに集中できるので、スムーズに学習出来るようになると思います。
+（そういう理由もあってか、近年はプログラミング学習スクールなどでも初心者向け講座としては<a class="keyword" href="http://d.hatena.ne.jp/keyword/Ruby">Ruby</a>や<a class="keyword" href="http://d.hatena.ne.jp/keyword/JavaScript">JavaScript</a>、<a class="keyword" href="http://d.hatena.ne.jp/keyword/Python">Python</a>といった言語が選定されることが多いようです。）</p>
+
+<p>また、よく言われる話として「<a class="keyword" href="http://d.hatena.ne.jp/keyword/C%B8%C0%B8%EC">C言語</a>は様々な言語に影響を与えた存在だから、<a class="keyword" href="http://d.hatena.ne.jp/keyword/C%B8%C0%B8%EC">C言語</a>をやっていれば応用が効く」「あらゆる言語はCで開発されているので、Cを理解すれば言語も深く理解できる」というものがあります。<br>
+これを外国語の学習に例えると「<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%E9%A5%C6%A5%F3%B8%EC">ラテン語</a>・<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%AE%A5%EA%A5%B7%A5%E3">ギリシャ</a>語はヨーロッパのさまざまな言語に影響を与えているので、外国語を学びたければ<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%E9%A5%C6%A5%F3%B8%EC">ラテン語</a>・<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%AE%A5%EA%A5%B7%A5%E3">ギリシャ</a>語から始めると深く理解できる」といった感じになると思います。確かにそれは事実かもしれませんが、メリットに比べてあまりにもデメリット（難易度や挫折のリスク）の方が大きすぎます。</p>
+
+<p><a class="keyword" href="http://d.hatena.ne.jp/keyword/%B1%D1%B8%EC%B7%F7">英語圏</a>で活躍したければ英語を、フランスに行きたければフランス語をまずは学べばいいのです。<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%E9%A5%C6%A5%F3%B8%EC">ラテン語</a>、<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%AE%A5%EA%A5%B7%A5%E3">ギリシャ</a>語など、それらに影響を与えた言語を学んで文法や単語を詳しく理解するのは後回しでもいいはずです。
+プログラミングでもそれは同じで、Webアプリを作りたければWeb向けの言語を、<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%B9%A5%DE%A5%DB">スマホ</a>アプリを開発したければ<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%B9%A5%DE%A5%DB">スマホ</a>アプリ向けの言語を最初に学ぶのが一番なのではないでしょうか。それらを習得した後に、<a class="keyword" href="http://d.hatena.ne.jp/keyword/C/C%2B%2B">C/C++</a>を学んでも遅くはありません。
+（やりたいことに直結している方がモチベーションも続きますからね）</p>
+
+<p>「<a href="https://qiita.com/wholekeik/items/4b8ee0825f0b12778a3a">大学での初心者に対するプログラミング講義ではC言語を使うべきでない</a>」といった記事でも解説されていますのでこちらも紹介しておきます。</p>
+
+<h3 id="CCが向いていないなら何の言語を選べばいいの"><a class="keyword" href="http://d.hatena.ne.jp/keyword/C/C%2B%2B">C/C++</a>が向いていないなら何の言語を選べばいいの？</h3>
+
+<p>やりたいことを最初に掲げて、それから言語を選んでいいと思います。</p>
+
+<ul>
+<li>ゲーム開発/AR/<a class="keyword" href="http://d.hatena.ne.jp/keyword/VR">VR</a> - <strong>Unity (<a class="keyword" href="http://d.hatena.ne.jp/keyword/C%23">C#</a>)</strong>
+
+<ul>
+<li>UnityはPCだけでなく<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%B9%A5%DE%A5%DB">スマホ</a>（<a class="keyword" href="http://d.hatena.ne.jp/keyword/Android">Android</a>/<a class="keyword" href="http://d.hatena.ne.jp/keyword/iOS">iOS</a>）でも動作するため、移植の度にハードに合わせてプログラムを書き直さないで済むのが強みです。最近は家庭用ゲーム機向けの開発にも利用されることがあるほか、<a class="keyword" href="http://d.hatena.ne.jp/keyword/VR">VR</a>などでもよく利用されています。</li>
+</ul>
+</li>
+<li><a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%B9%A5%DE%A5%DB">スマホ</a><a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%A2%A5%D7%A5%EA%B3%AB%C8%AF">アプリ開発</a> - <strong><a class="keyword" href="http://d.hatena.ne.jp/keyword/Java">Java</a>/Kotlin</strong> (<a class="keyword" href="http://d.hatena.ne.jp/keyword/Android">Android</a>)、<strong>Swift</strong> (<a class="keyword" href="http://d.hatena.ne.jp/keyword/iOS">iOS</a>)
+
+<ul>
+<li><a class="keyword" href="http://d.hatena.ne.jp/keyword/iOS">iOS</a>アプリの開発には<a class="keyword" href="http://d.hatena.ne.jp/keyword/Mac">Mac</a>が必要なのでご注意ください。</li>
+</ul>
+</li>
+<li>Web<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%A2%A5%D7%A5%EA%B3%AB%C8%AF">アプリ開発</a> - <strong><a class="keyword" href="http://d.hatena.ne.jp/keyword/Ruby">Ruby</a></strong>、<strong><a class="keyword" href="http://d.hatena.ne.jp/keyword/JavaScript">JavaScript</a></strong>
+
+<ul>
+<li>Webアプリでは<a class="keyword" href="http://d.hatena.ne.jp/keyword/Ruby%20on%20Rails">Ruby on Rails</a>という<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%D5%A5%EC%A1%BC%A5%E0%A5%EF%A1%BC%A5%AF">フレームワーク</a>がよく使われています</li>
+<li>Node.jsという<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%D5%A5%EC%A1%BC%A5%E0%A5%EF%A1%BC%A5%AF">フレームワーク</a>が登場し、今までブラウザなどでしか使われなかった<a class="keyword" href="http://d.hatena.ne.jp/keyword/JavaScript">JavaScript</a>がここ数年で急激にシェアを伸ばしています。</li>
+</ul>
+</li>
+<li><a class="keyword" href="http://d.hatena.ne.jp/keyword/%B5%A1%B3%A3%B3%D8%BD%AC">機械学習</a>/深層学習/<a class="keyword" href="http://d.hatena.ne.jp/keyword/%BF%CD%B9%A9%C3%CE%C7%BD">人工知能</a> - <strong><a class="keyword" href="http://d.hatena.ne.jp/keyword/Python">Python</a></strong>
+
+<ul>
+<li>最近流行りのAIなどを触りたいなら<a class="keyword" href="http://d.hatena.ne.jp/keyword/Python">Python</a>一択です。ライブラリは<a class="keyword" href="http://d.hatena.ne.jp/keyword/Python">Python</a>向けのものが圧倒的多数ですし、Jupyter Notebookを始め研究向きの環境も整っています。</li>
+</ul>
+</li>
+<li><a class="keyword" href="http://d.hatena.ne.jp/keyword/%C5%FD%B7%D7%B3%D8">統計学</a> - <strong>R</strong>
+
+<ul>
+<li>統計処理に最適化された言語です。統計を扱うならまずはRから始めて、より詳細な分析・処理を行うなら<a class="keyword" href="http://d.hatena.ne.jp/keyword/Python">Python</a>の学習に進んでもいいかもしれません。</li>
+</ul>
+</li>
+<li>特にやりたいことがない - <strong><a class="keyword" href="http://d.hatena.ne.jp/keyword/JavaScript">JavaScript</a></strong>
+
+<ul>
+<li>言語としてめちゃくちゃ優れているというわけではなく、<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%D7%A5%ED%A5%B0%A5%E9%A5%DE">プログラマ</a>からは時々批判されることもある言語ではあります。しかし、Webページ、Webアプリ、ブラウザ<a class="keyword" href="http://d.hatena.ne.jp/keyword/%B3%C8%C4%A5%B5%A1%C7%BD">拡張機能</a>、簡易的な<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%B9%A5%DE%A5%DB">スマホ</a>アプリ、PC向けアプリ、IoT機器……などと、あらゆる場面で使用できる言語なので、やっておいて損はないと思います。言語自体も難解ではないため「積極的にエンジニアになりたいわけではないが、スキルとしてプログラミングを身に着けたい」という層にもマッチすると思います。</li>
+<li><a class="keyword" href="http://d.hatena.ne.jp/keyword/JavaScript">JavaScript</a>は歴史ある<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%D7%A5%ED%A5%B0%A5%E9%A5%DF%A5%F3%A5%B0%B8%C0%B8%EC">プログラミング言語</a>なのですが、最近になって仕様が大きく変わっている言語なので、1990年代～2000年代に書かれたような古い参考書は基本的に役に立ちません。出来る限り新しい本やWebサイトで学ぶことをおすすめします。</li>
+</ul>
+</li>
+</ul>
+
+
+<h3 id="逆にどういう人はCCから始めるといいの">逆にどういう人は<a class="keyword" href="http://d.hatena.ne.jp/keyword/C/C%2B%2B">C/C++</a>から始めるといいの？</h3>
+
+<ul>
+<li>機械工学を学ぶ人
+
+<ul>
+<li>ロボットなど各種機械の制御として利用される言語は今でも<a class="keyword" href="http://d.hatena.ne.jp/keyword/C/C%2B%2B">C/C++</a>が中心です。</li>
+</ul>
+</li>
+<li><a class="keyword" href="http://d.hatena.ne.jp/keyword/%B6%A5%B5%BB%A5%D7%A5%ED%A5%B0%A5%E9%A5%DF%A5%F3%A5%B0">競技プログラミング</a>をしたい人
+
+<ul>
+<li>多くの<a class="keyword" href="http://d.hatena.ne.jp/keyword/%B6%A5%B5%BB%A5%D7%A5%ED%A5%B0%A5%E9%A5%DF%A5%F3%A5%B0">競技プログラミング</a>において言語の選定は自由ですが、実行速度の面で有利な<a class="keyword" href="http://d.hatena.ne.jp/keyword/C/C%2B%2B">C/C++</a>が事実上の標準となっています。</li>
+</ul>
+</li>
+<li><a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%D7%A5%ED%A5%B0%A5%E9%A5%DF%A5%F3%A5%B0%B8%C0%B8%EC">プログラミング言語</a>やOSを作りたい人
+
+<ul>
+<li><a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%B3%A5%F3%A5%D1%A5%A4%A5%E9">コンパイラ</a>やOSなどは<a class="keyword" href="http://d.hatena.ne.jp/keyword/C/C%2B%2B">C/C++</a>で書かれていることがほとんどです。</li>
+</ul>
+</li>
+<li>コンピュータの動作を詳しく理解・把握しながらプログラムを書きたい人
+
+<ul>
+<li><a class="keyword" href="http://d.hatena.ne.jp/keyword/C/C%2B%2B">C/C++</a>では、他の言語ではあまり意識しなくても済むような、メモリやCPUといったコンピュータの内部にある要素をほぼ常に意識してコードを書いていく必要があります。先ほど「<a class="keyword" href="http://d.hatena.ne.jp/keyword/C/C%2B%2B">C/C++</a>を初心者には勧めない」と書いた理由の1つでもありますが、このあたりの動作に関心がある人にとってはむしろメリットになるかもしれません。</li>
+</ul>
+</li>
+<li>大学の授業が<a class="keyword" href="http://d.hatena.ne.jp/keyword/C/C%2B%2B">C/C++</a>の人
+
+<ul>
+<li>これはもうどうしようもないので頑張っていきましょう。</li>
+</ul>
+</li>
+</ul>
+
+
+<h2 id="1-コンパイラのインストール">1. <a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%B3%A5%F3%A5%D1%A5%A4%A5%E9">コンパイラ</a>のインストール</h2>
+
+<p><a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%B3%A5%F3%A5%D1%A5%A4%A5%E9">コンパイラ</a>とは、人間の書いた<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%BD%A1%BC%A5%B9%A5%B3%A1%BC%A5%C9">ソースコード</a>からコンピュータが実行可能なデータを生成するためのものです。</p>
+
+<p><a class="keyword" href="http://d.hatena.ne.jp/keyword/Windows">Windows</a>向けなら<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%DE%A5%A4%A5%AF%A5%ED%A5%BD%A5%D5%A5%C8">マイクロソフト</a>製の<a class="keyword" href="http://d.hatena.ne.jp/keyword/Visual%20Studio">Visual Studio</a>（VS）を利用するという手もありますし、実際そのように解説しているサイトもあります。
+しかし、VSは大規模な開発向けのソフトなので、入門レベルでは使わないような機能が多いため画面が難解で、さらには動作が重いなどプログラミング学習にはデメリットが目立つのでオススメしません。
+料理に例えるなら、お茶漬けや卵かけご飯を作るために高級ホテルの本格的な厨房を使うようなものです。</p>
+
+<p>ここでは<b><a class="keyword" href="http://d.hatena.ne.jp/keyword/MinGW">MinGW</a></b>（ミン・<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%B8%A1%BC">ジー</a>・ダブリュー）というソフトウェアを使って、<b><a class="keyword" href="http://d.hatena.ne.jp/keyword/gcc">gcc</a></b>という<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%B3%A5%F3%A5%D1%A5%A4%A5%E9">コンパイラ</a>をインストールしましょう。</p>
+
+<p><span style="color: #999999">（経験者の方向けへの注釈：筆者自身はWSLを用いているのですが、この記事ではWSLを推奨していません。というのも、2019年現在で<a class="keyword" href="http://d.hatena.ne.jp/keyword/Windows">Windows</a>を想定したプログラミング初心者向けに行われる<a class="keyword" href="http://d.hatena.ne.jp/keyword/C/C%2B%2B">C/C++</a>の解説ではcmd.exe/<a class="keyword" href="http://d.hatena.ne.jp/keyword/PowerShell">PowerShell</a>に依存しているものが多いからです。また、<a class="keyword" href="http://d.hatena.ne.jp/keyword/Linux">Linux</a>の<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%C7%A5%A3%A5%EC%A5%AF%A5%C8">ディレクト</a>リ構造などに関する学習も必要になるため、少なくとも現時点では「入門者のため」としてWSLを採用するのはデメリットが大きいと筆者は考えております。）</span></p>
+
+<p>まず、<a href="http://www.mingw.org/">http://www.mingw.org</a> にアクセスし、右上の「Downloads」をクリックします。
+<span itemscope="" itemtype="http://schema.org/Photograph"><img src="./2020年版 C言語_C++ 入門者のための環境構築 (Windows編) - LYNCSブログ_files/20191221164639.png" alt="f:id:lyncs:20191221164639p:plain" title="f:id:lyncs:20191221164639p:plain" class="hatena-fotolife" itemprop="image"></span></p>
+
+<p><b><a class="keyword" href="http://d.hatena.ne.jp/keyword/MinGW">MinGW</a> - Minimalist <a class="keyword" href="http://d.hatena.ne.jp/keyword/GNU">GNU</a> for <a class="keyword" href="http://d.hatena.ne.jp/keyword/Windows">Windows</a> </b>と書かれたページに遷移するはずです。<br>
+そのまま下にスクロールし、<b><a class="keyword" href="http://d.hatena.ne.jp/keyword/MinGW">MinGW</a> Installation Manager (<a class="keyword" href="http://d.hatena.ne.jp/keyword/mingw">mingw</a>-get)</b> というリンクをクリックしてください。
+<span itemscope="" itemtype="http://schema.org/Photograph"><img src="./2020年版 C言語_C++ 入門者のための環境構築 (Windows編) - LYNCSブログ_files/20191221164132.png" alt="f:id:lyncs:20191221164132p:plain" title="f:id:lyncs:20191221164132p:plain" class="hatena-fotolife" itemprop="image"></span></p>
+
+<p><b><a class="keyword" href="http://d.hatena.ne.jp/keyword/MinGW">MinGW</a>-Get Version 0.x.x </b>と書かれたリンクをクリックしてください。x.xのところには何らかの数字が入っています。
+<span itemscope="" itemtype="http://schema.org/Photograph"><img src="./2020年版 C言語_C++ 入門者のための環境構築 (Windows編) - LYNCSブログ_files/20191221164111.png" alt="f:id:lyncs:20191221164111p:plain" title="f:id:lyncs:20191221164111p:plain" class="hatena-fotolife" itemprop="image"></span></p>
+
+<p><b><a class="keyword" href="http://d.hatena.ne.jp/keyword/mingw">mingw</a>-get-setup.exe</b> と書かれたリンクをクリックしてください。
+<span itemscope="" itemtype="http://schema.org/Photograph"><img src="./2020年版 C言語_C++ 入門者のための環境構築 (Windows編) - LYNCSブログ_files/20191221164114.png" alt="f:id:lyncs:20191221164114p:plain" title="f:id:lyncs:20191221164114p:plain" class="hatena-fotolife" itemprop="image"></span></p>
+
+<p>しばらくするとダウンロードが自動的に始まります。もしダウンロードが始まらない場合、<b><a class="keyword" href="http://d.hatena.ne.jp/keyword/mingw">mingw</a>-get-setup.exe</b>と書かれたリンクをクリックしてください。
+<span itemscope="" itemtype="http://schema.org/Photograph"><img src="./2020年版 C言語_C++ 入門者のための環境構築 (Windows編) - LYNCSブログ_files/20191221164115.png" alt="f:id:lyncs:20191221164115p:plain" title="f:id:lyncs:20191221164115p:plain" class="hatena-fotolife" itemprop="image"></span></p>
+
+<p>ダウンロードした<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%A4%A5%F3%A5%B9%A5%C8%A1%BC%A5%E9">インストーラ</a>を実行すると以下のような表示になります。
+「Install」をクリックしてください。
+<span itemscope="" itemtype="http://schema.org/Photograph"><img src="./2020年版 C言語_C++ 入門者のための環境構築 (Windows編) - LYNCSブログ_files/20180310042921.png" alt="f:id:lyncs:20180310042921p:plain" title="f:id:lyncs:20180310042921p:plain" class="hatena-fotolife" itemprop="image"></span></p>
+
+<p>特に変更せず、「Continue」をクリックしてください。
+（なお、Cドライブの空き容量が少ないなどでインストール先を変更した場合はその後のパスを適宜読み替えてください）
+<span itemscope="" itemtype="http://schema.org/Photograph"><img src="./2020年版 C言語_C++ 入門者のための環境構築 (Windows編) - LYNCSブログ_files/20180310043031.png" alt="f:id:lyncs:20180310043031p:plain" title="f:id:lyncs:20180310043031p:plain" class="hatena-fotolife" itemprop="image"></span></p>
+
+<p>必要なファイルのダウンロードが始まります。しばらくお待ちください。
+<span itemscope="" itemtype="http://schema.org/Photograph"><img src="./2020年版 C言語_C++ 入門者のための環境構築 (Windows編) - LYNCSブログ_files/20180310043144.png" alt="f:id:lyncs:20180310043144p:plain" title="f:id:lyncs:20180310043144p:plain" class="hatena-fotolife" itemprop="image"></span></p>
+
+<p>ダウンロードが完了すると「Continue」をクリックできるようになりますので、クリックしてください。
+<span itemscope="" itemtype="http://schema.org/Photograph"><img src="./2020年版 C言語_C++ 入門者のための環境構築 (Windows編) - LYNCSブログ_files/20180310043407.png" alt="f:id:lyncs:20180310043407p:plain" title="f:id:lyncs:20180310043407p:plain" class="hatena-fotolife" itemprop="image"></span></p>
+
+<p>スタートメニューやデスクトップに「<a class="keyword" href="http://d.hatena.ne.jp/keyword/MinGW">MinGW</a> Installation Manager」というショートカットが作成されるはずなので、これを起動しましょう。</p>
+
+<p><a class="keyword" href="http://d.hatena.ne.jp/keyword/MinGW">MinGW</a> Installation Managerが起動したら「mingw32-base」という項目をクリックし、現れるメニューの中から「Mark for Installation」をクリックしてください。
+<span itemscope="" itemtype="http://schema.org/Photograph"><img src="./2020年版 C言語_C++ 入門者のための環境構築 (Windows編) - LYNCSブログ_files/20180310043908.png" alt="f:id:lyncs:20180310043908p:plain" title="f:id:lyncs:20180310043908p:plain" class="hatena-fotolife" itemprop="image"></span></p>
+
+<p>「mingw32-<a class="keyword" href="http://d.hatena.ne.jp/keyword/gcc">gcc</a>-g++」という項目にも同じ操作を行ってください。以下のような画面になるはずです。
+<span itemscope="" itemtype="http://schema.org/Photograph"><img src="./2020年版 C言語_C++ 入門者のための環境構築 (Windows編) - LYNCSブログ_files/20180310044018.png" alt="f:id:lyncs:20180310044018p:plain" title="f:id:lyncs:20180310044018p:plain" class="hatena-fotolife" itemprop="image"></span></p>
+
+<p>「Installation」メニューから「Apply Changes」をクリックしてください。
+<span itemscope="" itemtype="http://schema.org/Photograph"><img src="./2020年版 C言語_C++ 入門者のための環境構築 (Windows編) - LYNCSブログ_files/20180310044100.png" alt="f:id:lyncs:20180310044100p:plain" title="f:id:lyncs:20180310044100p:plain" class="hatena-fotolife" itemprop="image"></span></p>
+
+<p>「Apply」をクリックしてください。
+<span itemscope="" itemtype="http://schema.org/Photograph"><img src="./2020年版 C言語_C++ 入門者のための環境構築 (Windows編) - LYNCSブログ_files/20180310044157.png" alt="f:id:lyncs:20180310044157p:plain" title="f:id:lyncs:20180310044157p:plain" class="hatena-fotolife" itemprop="image"></span></p>
+
+<p>必要なファイルがダウンロードされます。そのままお待ちください。
+<span itemscope="" itemtype="http://schema.org/Photograph"><img src="./2020年版 C言語_C++ 入門者のための環境構築 (Windows編) - LYNCSブログ_files/20180310044218.png" alt="f:id:lyncs:20180310044218p:plain" title="f:id:lyncs:20180310044218p:plain" class="hatena-fotolife" itemprop="image"></span></p>
+
+<p>完了したら「Close」をクリックしてください。
+<span itemscope="" itemtype="http://schema.org/Photograph"><img src="./2020年版 C言語_C++ 入門者のための環境構築 (Windows編) - LYNCSブログ_files/20180310044252.png" alt="f:id:lyncs:20180310044252p:plain" title="f:id:lyncs:20180310044252p:plain" class="hatena-fotolife" itemprop="image"></span></p>
+
+<p>このような画面になれば、<a class="keyword" href="http://d.hatena.ne.jp/keyword/MinGW">MinGW</a> Installation Managerを閉じて構いません。
+<span itemscope="" itemtype="http://schema.org/Photograph"><img src="./2020年版 C言語_C++ 入門者のための環境構築 (Windows編) - LYNCSブログ_files/20180310044322.png" alt="f:id:lyncs:20180310044322p:plain" title="f:id:lyncs:20180310044322p:plain" class="hatena-fotolife" itemprop="image"></span></p>
+
+<h2 id="2-パスを通す">2. パスを通す</h2>
+
+<p>インストールした<a class="keyword" href="http://d.hatena.ne.jp/keyword/gcc">gcc</a>を開発環境から利用できるようにします。以下は<a class="keyword" href="http://d.hatena.ne.jp/keyword/Windows">Windows</a> 10の場合です。</p>
+
+<p>スタートメニューを右クリックし、コン<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%C8%A5%ED%A1%BC%A5%EB">トロール</a>パネルを開きます。
+<span itemscope="" itemtype="http://schema.org/Photograph"><img src="./2020年版 C言語_C++ 入門者のための環境構築 (Windows編) - LYNCSブログ_files/20180310044545.png" alt="f:id:lyncs:20180310044545p:plain" title="f:id:lyncs:20180310044545p:plain" class="hatena-fotolife" itemprop="image"></span></p>
+
+<p>検索欄に「<a class="keyword" href="http://d.hatena.ne.jp/keyword/%B4%C4%B6%AD%CA%D1%BF%F4">環境変数</a>」と入力すると現れる「<a class="keyword" href="http://d.hatena.ne.jp/keyword/%B4%C4%B6%AD%CA%D1%BF%F4">環境変数</a>を編集」をクリックします。
+<span itemscope="" itemtype="http://schema.org/Photograph"><img src="./2020年版 C言語_C++ 入門者のための環境構築 (Windows編) - LYNCSブログ_files/20180310044611.png" alt="f:id:lyncs:20180310044611p:plain" title="f:id:lyncs:20180310044611p:plain" class="hatena-fotolife" itemprop="image"></span></p>
+
+<p>上の欄で「Path」を選択し、「編集」をクリックします。
+<span itemscope="" itemtype="http://schema.org/Photograph"><img src="./2020年版 C言語_C++ 入門者のための環境構築 (Windows編) - LYNCSブログ_files/20180310044625.png" alt="f:id:lyncs:20180310044625p:plain" title="f:id:lyncs:20180310044625p:plain" class="hatena-fotolife" itemprop="image"></span></p>
+
+<p>「新規」をクリックします。
+<span itemscope="" itemtype="http://schema.org/Photograph"><img src="./2020年版 C言語_C++ 入門者のための環境構築 (Windows編) - LYNCSブログ_files/20180310044804.png" alt="f:id:lyncs:20180310044804p:plain" title="f:id:lyncs:20180310044804p:plain" class="hatena-fotolife" itemprop="image"></span></p>
+
+<p>「C:\<a class="keyword" href="http://d.hatena.ne.jp/keyword/MinGW">MinGW</a>\bin」と入力し、追加します。
+以下のような画面になれば完了です。
+<span itemscope="" itemtype="http://schema.org/Photograph"><img src="./2020年版 C言語_C++ 入門者のための環境構築 (Windows編) - LYNCSブログ_files/20180310044825.png" alt="f:id:lyncs:20180310044825p:plain" title="f:id:lyncs:20180310044825p:plain" class="hatena-fotolife" itemprop="image"></span></p>
+
+<h2 id="3-拡張子の表示">3. 拡張子の表示</h2>
+
+<p>プログラミングをする上で拡張子を表示していないと何かと困ることがあるので、<a class="keyword" href="http://d.hatena.ne.jp/keyword/Windows">Windows</a>の設定を変えて表示しておきます。</p>
+
+<p>適当なフォルダを開いて上部の「表示」をクリックし、「拡張子の表示」にチェックを入れます。
+<span itemscope="" itemtype="http://schema.org/Photograph"><img src="./2020年版 C言語_C++ 入門者のための環境構築 (Windows編) - LYNCSブログ_files/20180310045028.png" alt="f:id:lyncs:20180310045028p:plain" title="f:id:lyncs:20180310045028p:plain" class="hatena-fotolife" itemprop="image"></span></p>
+
+<h2 id="4-エディタのインストール">4. エディタのインストール</h2>
+
+<p>書籍やサイトによっては「メモ帳」でも出来ると書かれていることがありますが、きちんとしたプログラミング向けのエディタを使うことでより学習しやすくなります。
+ここでは、2019年現在でよく使われている「<a class="keyword" href="http://d.hatena.ne.jp/keyword/Visual%20Studio%20Code">Visual Studio Code</a>」（<a class="keyword" href="http://d.hatena.ne.jp/keyword/VS%20Code">VS Code</a>）を利用しましょう。（「<a class="keyword" href="http://d.hatena.ne.jp/keyword/Visual%20Studio">Visual Studio</a>」と名前が似ていますが、「Code」の方は複雑な機能を外して<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%BD%A1%BC%A5%B9%A5%B3%A1%BC%A5%C9">ソースコード</a>の編集に特化した軽量・シンプルなソフトです。）</p>
+
+<p>プログラミング用のエディタとしては2000年代までは「<a class="keyword" href="http://d.hatena.ne.jp/keyword/TeraPad">TeraPad</a>」や「<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%B5%A5%AF%A5%E9%A5%A8%A5%C7%A5%A3%A5%BF">サクラエディタ</a>」などが挙げられることもありました。2019年現在では残念ながらそれらは時代遅れなソフトウェアとなっていますので、<a class="keyword" href="http://d.hatena.ne.jp/keyword/VS%20Code">VS Code</a>の使用を強くおすすめします。</p>
+
+<p><a href="https://code.visualstudio.com/">https://code.visualstudio.com</a> にアクセスし、「Download for <a class="keyword" href="http://d.hatena.ne.jp/keyword/Windows">Windows</a>」をクリックします。
+<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%A4%A5%F3%A5%B9%A5%C8%A1%BC%A5%E9">インストーラ</a>がダウンロードされるはずです。
+<span itemscope="" itemtype="http://schema.org/Photograph"><img src="./2020年版 C言語_C++ 入門者のための環境構築 (Windows編) - LYNCSブログ_files/20191207154150.png" alt="f:id:lyncs:20191207154150p:plain" title="f:id:lyncs:20191207154150p:plain" class="hatena-fotolife" itemprop="image"></span></p>
+
+<p><a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%A4%A5%F3%A5%B9%A5%C8%A1%BC%A5%E9">インストーラ</a>を実行したら、「次へ」をクリックします。
+このあたりは<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%A4%A5%F3%A5%B9%A5%C8%A1%BC%A5%E9">インストーラ</a>の指示に従って進めてください。
+<span itemscope="" itemtype="http://schema.org/Photograph"><img src="./2020年版 C言語_C++ 入門者のための環境構築 (Windows編) - LYNCSブログ_files/20191207132438.png" alt="f:id:lyncs:20191207132438p:plain" title="f:id:lyncs:20191207132438p:plain" class="hatena-fotolife" itemprop="image"></span>
+<span itemscope="" itemtype="http://schema.org/Photograph"><img src="./2020年版 C言語_C++ 入門者のための環境構築 (Windows編) - LYNCSブログ_files/20191207132440.png" alt="f:id:lyncs:20191207132440p:plain" title="f:id:lyncs:20191207132440p:plain" class="hatena-fotolife" itemprop="image"></span>
+<span itemscope="" itemtype="http://schema.org/Photograph"><img src="./2020年版 C言語_C++ 入門者のための環境構築 (Windows編) - LYNCSブログ_files/20191207132441.png" alt="f:id:lyncs:20191207132441p:plain" title="f:id:lyncs:20191207132441p:plain" class="hatena-fotolife" itemprop="image"></span></p>
+
+<p>ここでは、全てにチェックを入れてください。
+<span itemscope="" itemtype="http://schema.org/Photograph"><img src="./2020年版 C言語_C++ 入門者のための環境構築 (Windows編) - LYNCSブログ_files/20191207132509.png" alt="f:id:lyncs:20191207132509p:plain" title="f:id:lyncs:20191207132509p:plain" class="hatena-fotolife" itemprop="image"></span></p>
+
+<p>インストールを進めてください。
+<span itemscope="" itemtype="http://schema.org/Photograph"><img src="./2020年版 C言語_C++ 入門者のための環境構築 (Windows編) - LYNCSブログ_files/20191207132527.png" alt="f:id:lyncs:20191207132527p:plain" title="f:id:lyncs:20191207132527p:plain" class="hatena-fotolife" itemprop="image"></span>
+<span itemscope="" itemtype="http://schema.org/Photograph"><img src="./2020年版 C言語_C++ 入門者のための環境構築 (Windows編) - LYNCSブログ_files/20191207132538.png" alt="f:id:lyncs:20191207132538p:plain" title="f:id:lyncs:20191207132538p:plain" class="hatena-fotolife" itemprop="image"></span></p>
+
+<p>インストールが完了すると「Getting Started」といったWebページが開くことがありますが、読む必要がなければそのまま閉じてください。</p>
+
+<p><a class="keyword" href="http://d.hatena.ne.jp/keyword/VS%20Code">VS Code</a>が開くと、右下に英語でメッセージが出ますが、閉じて構いません。
+<span itemscope="" itemtype="http://schema.org/Photograph"><img src="./2020年版 C言語_C++ 入門者のための環境構築 (Windows編) - LYNCSブログ_files/20191207132611.png" alt="f:id:lyncs:20191207132611p:plain" title="f:id:lyncs:20191207132611p:plain" class="hatena-fotolife" itemprop="image"></span></p>
+
+<p>また、初期状態では英語になっているため、英語に不慣れな方は日本語化パックをインストールしましょう。
+左側の Extensions ボタンをクリックしてください。
+<span itemscope="" itemtype="http://schema.org/Photograph"><img src="./2020年版 C言語_C++ 入門者のための環境構築 (Windows編) - LYNCSブログ_files/20191207132753.png" alt="f:id:lyncs:20191207132753p:plain" title="f:id:lyncs:20191207132753p:plain" class="hatena-fotolife" itemprop="image"></span></p>
+
+<p>検索ボックスが現れるので Japanese と入力して、日本語化パック（Japanese Language Pack）をインストールしてください。おそらく一番上に表示されているはずです。
+<span itemscope="" itemtype="http://schema.org/Photograph"><img src="./2020年版 C言語_C++ 入門者のための環境構築 (Windows編) - LYNCSブログ_files/20191207132801.png" alt="f:id:lyncs:20191207132801p:plain" title="f:id:lyncs:20191207132801p:plain" class="hatena-fotolife" itemprop="image"></span></p>
+
+<p>インストールできたら右下に再起動を要求するメッセージが出るので、「Restart now」をクリックして<a class="keyword" href="http://d.hatena.ne.jp/keyword/VS%20Code">VS Code</a>を再起動しましょう。
+<span itemscope="" itemtype="http://schema.org/Photograph"><img src="./2020年版 C言語_C++ 入門者のための環境構築 (Windows編) - LYNCSブログ_files/20191207132837.png" alt="f:id:lyncs:20191207132837p:plain" title="f:id:lyncs:20191207132837p:plain" class="hatena-fotolife" itemprop="image"></span></p>
+
+<h2 id="5-コードを書いて実行していく">5. コードを書いて実行していく</h2>
+
+<p>一般的な参考書では、エディタでコードを書いて<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%B3%A5%DE%A5%F3%A5%C9%A5%D7%A5%ED%A5%F3%A5%D7%A5%C8">コマンドプロンプト</a>などから実行するように指示されていると思います。
+<a class="keyword" href="http://d.hatena.ne.jp/keyword/VS%20Code">VS Code</a>は<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%B3%A5%DE%A5%F3%A5%C9%A5%D7%A5%ED%A5%F3%A5%D7%A5%C8">コマンドプロンプト</a>をウィンドウ内に呼び出すことができるので、より効率的な学習ができると思います。</p>
+
+<p>Ctrl + @ を入力してください。すると、統合ターミナルが開くはずです。（もう一度 Ctrl + @ を押すと閉じます）
+<span itemscope="" itemtype="http://schema.org/Photograph"><img src="./2020年版 C言語_C++ 入門者のための環境構築 (Windows編) - LYNCSブログ_files/20180311021702.png" alt="f:id:lyncs:20180311021702p:plain" title="f:id:lyncs:20180311021702p:plain" class="hatena-fotolife" itemprop="image"></span></p>
+
+<p>また、プログラミングにおいては「フォルダ」（<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%C7%A5%A3%A5%EC%A5%AF%A5%C8">ディレクト</a>リ）を1つの単位としてプロジェクトを進めていくことが多いです。とりあえず全部マイドキュメントに保存、といったことは行いません。<br>
+ですので、とりあえず何らかの作業用フォルダを作成しておきましょう。（日本語文字列が含まれないファイルパスが望ましいので、Cドライブ直下などに <code>programming</code> のようなフォルダを作ると無難だと思います。）<br>
+学習が進んでいったら、この作業用フォルダ内にサブフォルダを作成して細分化していっても良いと思います。</p>
+
+<p>また、<a class="keyword" href="http://d.hatena.ne.jp/keyword/VS%20Code">VS Code</a>もプログラミングしやすくするため、「フォルダごと」開くことが出来ます。
+左側の「<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%A8%A5%AF%A5%B9%A5%D7%A5%ED%A1%BC%A5%E9">エクスプローラ</a>ー」ボタンをクリックして「フォルダーを開く」をクリックするか、ファイル→フォルダーを開く　をクリックしてください。
+<span itemscope="" itemtype="http://schema.org/Photograph"><img src="./2020年版 C言語_C++ 入門者のための環境構築 (Windows編) - LYNCSブログ_files/20191207132709.png" alt="f:id:lyncs:20191207132709p:plain" title="f:id:lyncs:20191207132709p:plain" class="hatena-fotolife" itemprop="image"></span></p>
+
+<p>フォルダを作成したら新規ファイルを作成しましょう。
+「ファイル」→「新規ファイル」で新しいタブが開くはずです。（「ようこそ」タブは閉じてOKです）<br>
+<a class="keyword" href="http://d.hatena.ne.jp/keyword/Hello%20World">Hello World</a>でも書いてみましょう。
+<span itemscope="" itemtype="http://schema.org/Photograph"><img src="./2020年版 C言語_C++ 入門者のための環境構築 (Windows編) - LYNCSブログ_files/20180311023521.png" alt="f:id:lyncs:20180311023521p:plain" title="f:id:lyncs:20180311023521p:plain" class="hatena-fotolife" itemprop="image"></span></p>
+
+<p>ファイルを保存しましょう。<code>hello.c</code> あたりで、拡張子 <code>.c</code> を付けるのをお忘れなく。
+<span itemscope="" itemtype="http://schema.org/Photograph"><img src="./2020年版 C言語_C++ 入門者のための環境構築 (Windows編) - LYNCSブログ_files/20180311023618.png" alt="f:id:lyncs:20180311023618p:plain" title="f:id:lyncs:20180311023618p:plain" class="hatena-fotolife" itemprop="image"></span></p>
+
+<p>拡張子を付けたファイルは言語に応じて色付け（<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%B7%A5%F3%A5%BF%A5%C3%A5%AF%A5%B9">シンタックス</a>ハイライト）してくれます。プログラミング向けエディタの強みの1つです。
+<span itemscope="" itemtype="http://schema.org/Photograph"><img src="./2020年版 C言語_C++ 入門者のための環境構築 (Windows編) - LYNCSブログ_files/20180311023641.png" alt="f:id:lyncs:20180311023641p:plain" title="f:id:lyncs:20180311023641p:plain" class="hatena-fotolife" itemprop="image"></span></p>
+
+<p>Ctrl + @ を押して統合ターミナルを開くと、既に現在開いているフォルダに移動した状態の<a class="keyword" href="http://d.hatena.ne.jp/keyword/PowerShell">PowerShell</a>がウィンドウ内で開いてくれます。
+<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%B3%A5%F3%A5%D1%A5%A4%A5%EB">コンパイル</a>するコマンド <code>gcc hello.c</code> を入力して Enter を押してください。
+<span itemscope="" itemtype="http://schema.org/Photograph"><img src="./2020年版 C言語_C++ 入門者のための環境構築 (Windows編) - LYNCSブログ_files/20180311023916.png" alt="f:id:lyncs:20180311023916p:plain" title="f:id:lyncs:20180311023916p:plain" class="hatena-fotolife" itemprop="image"></span></p>
+
+<p><a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%B3%A5%F3%A5%D1%A5%A4%A5%EB">コンパイル</a>が完了すると同じフォルダに実行ファイルが出力されます。<br>
+今回は<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%B3%A5%F3%A5%D1%A5%A4%A5%EB">コンパイル</a>時に出力ファイル名を指定しなかったので <code>a.exe</code> という名前になっているはずです。
+<span itemscope="" itemtype="http://schema.org/Photograph"><img src="./2020年版 C言語_C++ 入門者のための環境構築 (Windows編) - LYNCSブログ_files/20180311024013.png" alt="f:id:lyncs:20180311024013p:plain" title="f:id:lyncs:20180311024013p:plain" class="hatena-fotolife" itemprop="image"></span></p>
+
+<p>これを実行してみましょう。統合ターミナルに <code>.\a.exe</code> と入力してください。（<code>a.exe</code> の前に <code>.\</code> ドットとバックスラッシュを入力することをお忘れなく。バックスラッシュは<a class="keyword" href="http://d.hatena.ne.jp/keyword/Windows">Windows</a>環境では円マークと同じ文字列です。）<br>
+無事実行できれば以下のような表示になるはずです。
+<span itemscope="" itemtype="http://schema.org/Photograph"><img src="./2020年版 C言語_C++ 入門者のための環境構築 (Windows編) - LYNCSブログ_files/20180311024130.png" alt="f:id:lyncs:20180311024130p:plain" title="f:id:lyncs:20180311024130p:plain" class="hatena-fotolife" itemprop="image"></span></p>
+
+<p>環境構築と<a class="keyword" href="http://d.hatena.ne.jp/keyword/Hello%20World">Hello World</a>の実行手順を把握するところでこの記事は終わりです。 <br>
+ここから先はお手持ちの参考書や授業をベースにして進めていってください。それでは良き開発ライフを！</p>
+
+<h2 id="LYNCS-とは">LYNCS とは？</h2>
+
+<p><a class="keyword" href="http://d.hatena.ne.jp/keyword/%B7%C4%D8%E6%B5%C1%BD%CE%C2%E7%B3%D8">慶應義塾大学</a>文化団体連盟所属団体 宇宙科学総合研究会 LYNCS (Laboratory of sYNnthetic Cosmic Science, リンクス)はその名前の通り、宇宙について様々な面から研究、アプローチをするサークルです。<br>
+工学分野では電子工作やプログラミングを扱い、模擬<a class="keyword" href="http://d.hatena.ne.jp/keyword/%BF%CD%B9%A9%B1%D2%C0%B1">人工衛星</a>「<a class="keyword" href="http://d.hatena.ne.jp/keyword/CanSat">CanSat</a>」の開発やドローンの開発などを行っています。プログラミング・電子工作の初心者でも興味がある方なら大歓迎です！先輩がサポートしていきます！
+（実際、プログラミング未経験だった1年生が、その年の終わりには<a class="keyword" href="http://d.hatena.ne.jp/keyword/Raspberry%20Pi">Raspberry Pi</a>などを利用して自律走行ロボットやドローンを自作できるようになりました。）<br>
+<a class="keyword" href="http://d.hatena.ne.jp/keyword/%B7%C4%D8%E6%B5%C1%BD%CE%C2%E7%B3%D8">慶應義塾大学</a>に進学される方、在学中の方でご興味をお持ちの方は、<a href="https://twitter.com/keio_LYNCS">公式Twitter</a> や<a href="http://www.lyncs-keio.net/about/index.html#contact">メール</a>などでお気軽にお問い合わせください！</p>
+
+    
+
+  
+</div>
+
+    
+  <footer class="entry-footer">
+    
+    <p class="entry-footer-section">
+  <span class="author vcard"><span class="fn" data-load-nickname="1" data-user-name="lyncs">lyncs</span></span>
+  <span class="entry-footer-time"><a href="http://lyncs.hateblo.jp/entry/2018/03/11/032127"><time data-relative="" datetime="2019-12-07T04:30:00Z" title="2019-12-07T04:30:00Z" pubdate="" class="updated">133日前</time></a></span>
+</p>
+
+    
+  <div class="hatena-star-container">
+  <span class="hatena-star-comment-container"><img src="./2020年版 C言語_C++ 入門者のための環境構築 (Windows編) - LYNCSブログ_files/comment.gif" tabindex="0" alt="Comments" title="Comments" class="hatena-star-comment-button" style="cursor: pointer; margin: 0px; padding: 0px; border: none; vertical-align: middle; display: none;"></span><span class="hatena-star-star-container"><img src="./2020年版 C言語_C++ 入門者のための環境構築 (Windows編) - LYNCSブログ_files/hatena-star-add-button.svg" tabindex="0" alt="Add Star" title="Add Star" class="hatena-star-add-button" style="cursor: pointer; margin: 0px 3px; padding: 0px; border: none; vertical-align: middle;"><a href="http://blog.hatena.ne.jp/chabajunsei/"><span class="hatena-big-star-star-container"><img src="./2020年版 C言語_C++ 入門者のための環境構築 (Windows編) - LYNCSブログ_files/profile.png" tabindex="0" class="hatena-star-user" style="padding: 0px; border: none;"><img src="./2020年版 C言語_C++ 入門者のための環境構築 (Windows編) - LYNCSブログ_files/star.gif" tabindex="0" class="hatena-star-star" style="padding: 0px; border: none;" alt="chabajunsei" title=""></span></a><a href="http://blog.hatena.ne.jp/takeg/"><span class="hatena-big-star-star-container"><img src="./2020年版 C言語_C++ 入門者のための環境構築 (Windows編) - LYNCSブログ_files/profile(1).png" tabindex="0" class="hatena-star-user" style="padding: 0px; border: none;"><img src="./2020年版 C言語_C++ 入門者のための環境構築 (Windows編) - LYNCSブログ_files/star.gif" tabindex="0" class="hatena-star-star" style="padding: 0px; border: none;" alt="takeg" title=""></span></a><a href="http://blog.hatena.ne.jp/mofu_fusa/"><span class="hatena-big-star-star-container"><img src="./2020年版 C言語_C++ 入門者のための環境構築 (Windows編) - LYNCSブログ_files/profile(2).png" tabindex="0" class="hatena-star-user" style="padding: 0px; border: none;"><img src="./2020年版 C言語_C++ 入門者のための環境構築 (Windows編) - LYNCSブログ_files/star.gif" tabindex="0" class="hatena-star-star" style="padding: 0px; border: none;" alt="mofu_fusa" title=""></span></a><a href="http://blog.hatena.ne.jp/komee/"><span class="hatena-big-star-star-container"><img src="./2020年版 C言語_C++ 入門者のための環境構築 (Windows編) - LYNCSブログ_files/profile(3).png" tabindex="0" class="hatena-star-user" style="padding: 0px; border: none;"><img src="./2020年版 C言語_C++ 入門者のための環境構築 (Windows編) - LYNCSブログ_files/star.gif" tabindex="0" class="hatena-star-star" style="padding: 0px; border: none;" alt="komee" title=""></span></a><a href="http://blog.hatena.ne.jp/ijsaki/"><span class="hatena-big-star-star-container"><img src="./2020年版 C言語_C++ 入門者のための環境構築 (Windows編) - LYNCSブログ_files/profile(4).png" tabindex="0" class="hatena-star-user" style="padding: 0px; border: none;"><img src="./2020年版 C言語_C++ 入門者のための環境構築 (Windows編) - LYNCSブログ_files/star.gif" tabindex="0" class="hatena-star-star" style="padding: 0px; border: none;" alt="ijsaki" title=""></span></a><a href="http://blog.hatena.ne.jp/ijsaki/"><span class="hatena-big-star-star-container"><img src="./2020年版 C言語_C++ 入門者のための環境構築 (Windows編) - LYNCSブログ_files/profile(4).png" tabindex="0" class="hatena-star-user" style="padding: 0px; border: none;"><img src="./2020年版 C言語_C++ 入門者のための環境構築 (Windows編) - LYNCSブログ_files/star.gif" tabindex="0" class="hatena-star-star" style="padding: 0px; border: none;" alt="ijsaki" title=""></span></a></span></div>
+  <div class="hatena-star-metadata" style="display: none">
+    <a class="hatena-star-permalink" href="http://lyncs.hateblo.jp/entry/2018/03/11/032127">2020年版 C言語/C++ 入門者のための環境構築 (Windows編)</a>
+  </div>
+
+
+    
+<div class="social-buttons">
+  
+  
+    <div class="social-button-item">
+      <iframe class="hatena-bookmark-button-frame" title="この記事をはてなブックマークに追加" frameborder="0" scrolling="no" width="84" height="40" src="javascript:false" style="width: 84px; height: 40px;" src="./2020年版 C言語_C++ 入門者のための環境構築 (Windows編) - LYNCSブログ_files/saved_resource(2).html"></iframe>
+    </div>
+  
+  
+    <div class="social-button-item">
+      <div class="fb-share-button fb_iframe_widget" data-layout="box_count" data-href="http://lyncs.hateblo.jp/entry/2018/03/11/032127" fb-xfbml-state="rendered" fb-iframe-plugin-query="app_id=719729204785177&amp;container_width=0&amp;href=http%3A%2F%2Flyncs.hateblo.jp%2Fentry%2F2018%2F03%2F11%2F032127&amp;layout=box_count&amp;locale=ja_JP&amp;sdk=joey"><span style="vertical-align: bottom; width: 69px; height: 40px;"><iframe name="f22ac1de5885b38" width="1000px" height="1000px" data-testid="fb:share_button Facebook Social Plugin" title="fb:share_button Facebook Social Plugin" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" src="./2020年版 C言語_C++ 入門者のための環境構築 (Windows編) - LYNCSブログ_files/share_button(1).html" style="border: none; visibility: visible; width: 69px; height: 40px;" class=""></iframe></span></div>
+    </div>
+  
+  
+    <div class="social-button-item">
+      <iframe id="twitter-widget-2" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" class="twitter-share-button twitter-share-button-rendered twitter-tweet-button" style="position: static; visibility: visible; width: 75px; height: 20px;" title="Twitter Tweet Button" src="./2020年版 C言語_C++ 入門者のための環境構築 (Windows編) - LYNCSブログ_files/tweet_button.6787510241df65d128e2b60207ad4c25.ja(1).html" data-url="http://lyncs.hateblo.jp/entry/2018/03/11/032127"></iframe>
+    </div>
+  
+  
+  
+    <span>
+      <iframe data-type="share-e" data-lang="ja" data-line-it-id="1" scrolling="no" frameborder="0" allowtransparency="true" class="line-it-button" src="./2020年版 C言語_C++ 入門者のための環境構築 (Windows編) - LYNCSブログ_files/share(1).html" style="width: 36px; height: 60px; visibility: visible; position: static;" title="このページの情報をLINEでシェアできます。"></iframe>
+      <script src="./2020年版 C言語_C++ 入門者のための環境構築 (Windows編) - LYNCSブログ_files/loader.min.js.ダウンロード" async="async" defer="defer"></script>
+    </span>
+  
+  
+    <div class="social-button-item">
+      <a data-pocket-label="pocket" data-save-url="http://lyncs.hateblo.jp/entry/2018/03/11/032127" data-pocket-count="vertical" class="pocket-btn" data-lang="en"></a>
+    </div>
+  
+</div>
+
+    
+  
+  
+    
+    <div class="google-afc-image test-google-rectangle-ads">      
+      
+      <div id="google_afc_user_container_0" class="google-afc-user-container google_afc_blocklink2_5 google_afc_boder" data-test-unit="/4374287/blog_user"></div>
+      
+        <a href="http://blog.hatena.ne.jp/guide/pro" class="open-pro-modal" data-guide-pro-modal-ad-url="https://hatenablog.com/guide/pro/modal/ad">広告を非表示にする</a>
+      
+    </div>
+  
+  
+
+
+    <div class="customized-footer">
+      
+
+        
+
+        
+
+          <div class="entry-footer-modules" id="entry-footer-secondary-modules">      
+<div class="hatena-module hatena-module-related-entries">
+      
+  <!-- Hatena-Epic-has-related-entries-with-elasticsearch:true -->
+  <div class="hatena-module-title">
+    関連記事
+  </div>
+  <div class="hatena-module-body">
+    <ul class="related-entries hatena-urllist urllist-with-thumbnails">
+  
+  
+    
+    <li class="urllist-item related-entries-item">
+      <div class="urllist-item-inner related-entries-item-inner">
+        
+                      <a class="urllist-image-link related-entries-image-link" href="http://lyncs.hateblo.jp/entry/2019/03/07/235107">
+  <img alt="【学部・学科別】慶應 LYNCS 会員おすすめのパソコンはこれ！　新入生のためのノートパソコンの選び方" src="./2020年版 C言語_C++ 入門者のための環境構築 (Windows編) - LYNCSブログ_files/https___cdn-ak.f.st-hatena.com_images_fotolife_l_lyncs_20190307_20190307023319.jpg" class="urllist-image related-entries-image" title="【学部・学科別】慶應 LYNCS 会員おすすめのパソコンはこれ！　新入生のためのノートパソコンの選び方" width="100">
+</a>
+            <div class="urllist-date-link related-entries-date-link">
+  <a href="http://lyncs.hateblo.jp/archive/2019/03/07" rel="nofollow">
+    <time pubdate="" datetime="2019-03-07T14:51:07Z" title="2019-03-07T14:51:07Z">
+      2019-03-07
+    </time>
+  </a>
+</div>
+
+          <a href="http://lyncs.hateblo.jp/entry/2019/03/07/235107" class="urllist-title-link related-entries-title-link  urllist-title related-entries-title">【学部・学科別】慶應 LYNCS 会員おすすめのパソコンはこれ！ 新入生のためのノートパソコンの選び…</a>
+
+
+          
+          
+
+                      <div class="urllist-entry-body related-entries-entry-body">様々な分野から宇宙にチャレンジする慶應義塾大学の学生団体「L…</div>
+      </div>
+    </li>
+  
+    
+    <li class="urllist-item related-entries-item">
+      <div class="urllist-item-inner related-entries-item-inner">
+        
+                      <div class="urllist-date-link related-entries-date-link">
+  <a href="http://lyncs.hateblo.jp/archive/2018/12/07" rel="nofollow">
+    <time pubdate="" datetime="2018-12-06T19:01:29Z" title="2018-12-06T19:01:29Z">
+      2018-12-07
+    </time>
+  </a>
+</div>
+
+          <a href="http://lyncs.hateblo.jp/entry/2018/12/07/040129" class="urllist-title-link related-entries-title-link  urllist-title related-entries-title">Bootcamp で Windows を動かす時のため Print Screen を召喚する話</a>
+
+
+          
+          
+
+                      <div class="urllist-entry-body related-entries-entry-body">この記事は、LYNCS Advent Calendar 2018 6日目の記事です。12…</div>
+      </div>
+    </li>
+  
+    
+    <li class="urllist-item related-entries-item">
+      <div class="urllist-item-inner related-entries-item-inner">
+        
+                      <a class="urllist-image-link related-entries-image-link" href="http://lyncs.hateblo.jp/entry/2018/12/02/185821">
+  <img alt="MacでWindowsのPCとzipファイルをやり取りするために" src="./2020年版 C言語_C++ 入門者のための環境構築 (Windows編) - LYNCSブログ_files/https___cdn-ak.f.st-hatena.com_images_fotolife_l_lyncs_20181202_20181202032819.png" class="urllist-image related-entries-image" title="MacでWindowsのPCとzipファイルをやり取りするために" width="100">
+</a>
+            <div class="urllist-date-link related-entries-date-link">
+  <a href="http://lyncs.hateblo.jp/archive/2018/12/02" rel="nofollow">
+    <time pubdate="" datetime="2018-12-02T09:58:21Z" title="2018-12-02T09:58:21Z">
+      2018-12-02
+    </time>
+  </a>
+</div>
+
+          <a href="http://lyncs.hateblo.jp/entry/2018/12/02/185821" class="urllist-title-link related-entries-title-link  urllist-title related-entries-title">MacでWindowsのPCとzipファイルをやり取りするために</a>
+
+
+          
+          
+
+                      <div class="urllist-entry-body related-entries-entry-body">この記事は、LYNCS Advent Calendar 2018 2日目の記事です（本…</div>
+      </div>
+    </li>
+  
+    
+    <li class="urllist-item related-entries-item">
+      <div class="urllist-item-inner related-entries-item-inner">
+        
+                      <a class="urllist-image-link related-entries-image-link" href="http://lyncs.hateblo.jp/entry/2018/04/15/055543">
+  <img alt="VSCodeでTeXがいじれなくなった" src="./2020年版 C言語_C++ 入門者のための環境構築 (Windows編) - LYNCSブログ_files/https___cdn-ak.f.st-hatena.com_images_fotolife_l_lyncs_20180414_20180414132130.jpg" class="urllist-image related-entries-image" title="VSCodeでTeXがいじれなくなった" width="100">
+</a>
+            <div class="urllist-date-link related-entries-date-link">
+  <a href="http://lyncs.hateblo.jp/archive/2018/04/15" rel="nofollow">
+    <time pubdate="" datetime="2018-04-14T20:55:43Z" title="2018-04-14T20:55:43Z">
+      2018-04-15
+    </time>
+  </a>
+</div>
+
+          <a href="http://lyncs.hateblo.jp/entry/2018/04/15/055543" class="urllist-title-link related-entries-title-link  urllist-title related-entries-title">VSCodeでTeXがいじれなくなった</a>
+
+
+          
+          
+
+                      <div class="urllist-entry-body related-entries-entry-body">VSCodeでTeXがいじれなくなった 皆さんお久しぶりです．あっき…</div>
+      </div>
+    </li>
+  
+    
+    <li class="urllist-item related-entries-item">
+      <div class="urllist-item-inner related-entries-item-inner">
+        
+                      <a class="urllist-image-link related-entries-image-link" href="http://lyncs.hateblo.jp/entry/2017/12/16/000103">
+  <img alt="量子情報科学序論  IBM Qを動かして学ぶ量子コンピュータ" src="./2020年版 C言語_C++ 入門者のための環境構築 (Windows編) - LYNCSブログ_files/https___cdn-ak.f.st-hatena.com_images_fotolife_l_lyncs_20171215_20171215223333.png" class="urllist-image related-entries-image" title="量子情報科学序論  IBM Qを動かして学ぶ量子コンピュータ" width="100">
+</a>
+            <div class="urllist-date-link related-entries-date-link">
+  <a href="http://lyncs.hateblo.jp/archive/2017/12/16" rel="nofollow">
+    <time pubdate="" datetime="2017-12-15T15:01:03Z" title="2017-12-15T15:01:03Z">
+      2017-12-16
+    </time>
+  </a>
+</div>
+
+          <a href="http://lyncs.hateblo.jp/entry/2017/12/16/000103" class="urllist-title-link related-entries-title-link  urllist-title related-entries-title">量子情報科学序論 IBM Qを動かして学ぶ量子コンピュータ</a>
+
+
+          
+          
+
+                      <div class="urllist-entry-body related-entries-entry-body">【前置き】この記事は『量子コンピュータ Advent Calendar 2017…</div>
+      </div>
+    </li>
+  
+</ul>
+
+  </div>
+</div>
+  </div>
+        
+  <div class="entry-footer-html"><script src="./2020年版 C言語_C++ 入門者のための環境構築 (Windows編) - LYNCSブログ_files/MathJax.js.ダウンロード" id=""></script>
+<script type="text/x-mathjax-config;executed=true">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      displayMath: [ ['$$','$$'], ["\\[","\\]"] ]
+    }
+  });
+</script></div>
+
+
+      
+    </div>
+    
+  <div class="comment-box">
+    
+    <ul class="comment"><li id="comment-10257846132663600831" class="entry-comment js-entry-comment
+    comment-hatena-user
+  " data-comment-uuid="10257846132663600831" data-blog-uuid="10328749687204235197" onclick="">
+  <p class="comment-user-name"><img src="./2020年版 C言語_C++ 入門者のための環境構築 (Windows編) - LYNCSブログ_files/profile(5).png" class="hatena-id-icon" alt="" title=""> <a href="http://blog.hatena.ne.jp/Windnap/" class="comment-user-id"><span class="comment-nickname" data-load-nickname="1" data-user-name="Windnap"><span class="user-name-nickname">だて</span> <span class="user-name-paren">(</span><span class="user-name-hatena-id">id:Windnap</span><span class="user-name-paren">)</span></span></a></p>
+  <div class="comment-content"><p><a rel="nofollow">https://ja.wikipedia.org/wiki/Unity_(%E3%82%B2%E3%83%BC%E3%83%A0%E3%82%A8%E3%83%B3%E3%82%B8%E3%83%B3)</a></p>
+</div>
+
+  <p class="comment-metadata">
+    
+    <a href="http://lyncs.hateblo.jp/entry/2018/03/11/032127#comment-10257846132663600831" class="permalink" style="display:none"></a>
+
+    <time datetime="2018-11-02T14:15:18Z" data-relative="" data-epoch="1541168118000">1年前</time>
+  <span class="hatena-star-comment-container"><img src="./2020年版 C言語_C++ 入門者のための環境構築 (Windows編) - LYNCSブログ_files/comment.gif" tabindex="0" alt="Comments" title="Comments" class="hatena-star-comment-button" style="cursor: pointer; margin: 0px; padding: 0px; border: none; vertical-align: middle; display: none;"></span><span class="hatena-star-star-container"><img src="./2020年版 C言語_C++ 入門者のための環境構築 (Windows編) - LYNCSブログ_files/hatena-star-add-button.svg" tabindex="0" alt="Add Star" title="Add Star" class="hatena-star-add-button" style="cursor: pointer; margin: 0px 3px; padding: 0px; border: none; vertical-align: middle;"></span></p>
+
+  <a href="http://lyncs.hateblo.jp/entry/2018/03/11/032127#" class="comment-delete-button js-comment-delete-button">
+  </a>
+</li>
+<li id="comment-17680117126980739645" class="entry-comment js-entry-comment
+    comment-guest
+  " data-comment-uuid="17680117126980739645" data-blog-uuid="10328749687204235197" onclick="">
+  <p class="comment-user-name"><img src="./2020年版 C言語_C++ 入門者のための環境構築 (Windows編) - LYNCSブログ_files/guest_icon_64.gif" class="hatena-id-icon" alt="" title="">
+    naop
+  </p>
+  <div class="comment-content"><p>説明が丁寧で、とても分かりやすかったです。ありがとうございました。</p>
+</div>
+
+  <p class="comment-metadata">
+    
+    <a href="http://lyncs.hateblo.jp/entry/2018/03/11/032127#comment-17680117126980739645" class="permalink" style="display:none"></a>
+
+    <time datetime="2019-02-26T02:41:53Z" data-relative="" data-epoch="1551148913000">1年前</time>
+  <span class="hatena-star-comment-container"><img src="./2020年版 C言語_C++ 入門者のための環境構築 (Windows編) - LYNCSブログ_files/comment.gif" tabindex="0" alt="Comments" title="Comments" class="hatena-star-comment-button" style="cursor: pointer; margin: 0px; padding: 0px; border: none; vertical-align: middle; display: none;"></span><span class="hatena-star-star-container"><img src="./2020年版 C言語_C++ 入門者のための環境構築 (Windows編) - LYNCSブログ_files/hatena-star-add-button.svg" tabindex="0" alt="Add Star" title="Add Star" class="hatena-star-add-button" style="cursor: pointer; margin: 0px 3px; padding: 0px; border: none; vertical-align: middle;"></span></p>
+
+  <a href="http://lyncs.hateblo.jp/entry/2018/03/11/032127#" class="comment-delete-button js-comment-delete-button">
+  </a>
+</li>
+<li id="comment-17680117127129539136" class="entry-comment js-entry-comment
+    comment-guest
+  " data-comment-uuid="17680117127129539136" data-blog-uuid="10328749687204235197" onclick="">
+  <p class="comment-user-name"><img src="./2020年版 C言語_C++ 入門者のための環境構築 (Windows編) - LYNCSブログ_files/guest_icon_64.gif" class="hatena-id-icon" alt="" title="">
+    kota
+  </p>
+  <div class="comment-content"><p>VScodeの記事がたくさんあって悩んでいたのですが、わかりやすくてとても助かりました、ありがとうございました！</p>
+</div>
+
+  <p class="comment-metadata">
+    
+    <a href="http://lyncs.hateblo.jp/entry/2018/03/11/032127#comment-17680117127129539136" class="permalink" style="display:none"></a>
+
+    <time datetime="2019-05-11T10:14:43Z" data-relative="" data-epoch="1557569683000">343日前</time>
+  <span class="hatena-star-comment-container"><img src="./2020年版 C言語_C++ 入門者のための環境構築 (Windows編) - LYNCSブログ_files/comment.gif" tabindex="0" alt="Comments" title="Comments" class="hatena-star-comment-button" style="cursor: pointer; margin: 0px; padding: 0px; border: none; vertical-align: middle; display: none;"></span><span class="hatena-star-star-container"><img src="./2020年版 C言語_C++ 入門者のための環境構築 (Windows編) - LYNCSブログ_files/hatena-star-add-button.svg" tabindex="0" alt="Add Star" title="Add Star" class="hatena-star-add-button" style="cursor: pointer; margin: 0px 3px; padding: 0px; border: none; vertical-align: middle;"></span></p>
+
+  <a href="http://lyncs.hateblo.jp/entry/2018/03/11/032127#" class="comment-delete-button js-comment-delete-button">
+  </a>
+</li>
+
+      <li class="read-more-comments" style=""><a>もっと読む</a></li>
+    </ul>
+    
+      <a class="leave-comment-title js-leave-comment-title">コメントを書く</a>
+    
+  </div>
+
+  </footer>
+
+  </div>
+</article>
+
+      
+      
+    
+  
+
+  
+  <!-- rakuten_ad_target_end -->
+  <!-- google_ad_section_end -->
+  
+  
+  
+  <div class="pager pager-permalink permalink">
+    
+      
+      <span class="pager-prev">
+        <a href="http://lyncs.hateblo.jp/entry/2019/12/30/221046" rel="prev">
+          <span class="pager-arrow">« </span>
+          下田合宿 2019 報告
+        </a>
+      </span>
+    
+    
+      
+      <span class="pager-next">
+        <a href="http://lyncs.hateblo.jp/entry/2019/10/16/013717" rel="next">
+          死んでも技術書典では T シャツを売っては…
+          <span class="pager-arrow"> »</span>
+        </a>
+      </span>
+    
+  </div>
+
+
+  
+
+
+
+        </div>
+      </div>
+
+      <aside id="box1">
+  <div id="box1-inner">
+  </div>
+</aside>
+
+    </div><!-- #wrapper -->
+
+    
+<aside id="box2">
+  
+  <div id="box2-inner">
+    
+      
+
+<div class="hatena-module hatena-module-profile">
+  <div class="hatena-module-title">
+    プロフィール
+  </div>
+  <div class="hatena-module-body">
+    
+    <a href="http://lyncs.hateblo.jp/about" class="profile-icon-link">
+      <img src="./2020年版 C言語_C++ 入門者のための環境構築 (Windows編) - LYNCSブログ_files/profile(6).png" alt="id:lyncs" class="profile-icon">
+    </a>
+    
+
+    
+    <span class="id">
+      <a href="http://lyncs.hateblo.jp/about" class="hatena-id-link"><span data-load-nickname="1" data-user-name="lyncs">id:lyncs</span></a>
+      
+  
+    
+    
+  
+
+
+    </span>
+    
+
+    
+
+    
+    <div class="profile-description">
+      <p>慶應義塾大学公認団体 宇宙科学総合研究会（LYNCS）のブログです。</p>
+
+    </div>
+    
+
+    
+      <div class="hatena-follow-button-box btn-subscribe js-hatena-follow-button-box">
+
+  <a href="http://lyncs.hateblo.jp/entry/2018/03/11/032127#" class="hatena-follow-button js-hatena-follow-button unsubscribing">
+    <span class="subscribing">
+      <span class="foreground">読者です</span>
+      <span class="background">読者をやめる</span>
+    </span>
+    <span class="unsubscribing" data-track-name="profile-widget-subscribe-button" data-track-once="">
+      <span class="foreground">読者になる</span>
+      <span class="background">読者になる</span>
+    </span>
+  </a>
+  <div class="subscription-count-box js-subscription-count-box" style="display: block;">
+    <i></i>
+    <u></u>
+    <span class="subscription-count js-subscription-count">17</span>
+  </div>
+</div>
+
+    
+
+    
+  </div>
+</div>
+
+    
+      <div class="hatena-module hatena-module-links">
+  <div class="hatena-module-title">
+    リンク
+  </div>
+  <div class="hatena-module-body">
+    <ul class="hatena-urllist">
+      
+        <li>
+          <a href="http://www.lyncs-keio.net/">LYNCS公式サイト</a>
+        </li>
+      
+        <li>
+          <a href="https://twitter.com/keio_LYNCS">LYNCS公式Twitter</a>
+        </li>
+      
+    </ul>
+  </div>
+</div>
+
+    
+      <div class="hatena-module hatena-module-recent-entries ">
+  <div class="hatena-module-title">
+    <a href="http://lyncs.hateblo.jp/archive">
+      最新記事
+    </a>
+  </div>
+  <div class="hatena-module-body">
+    <ul class="recent-entries hatena-urllist ">
+  
+  
+    
+    <li class="urllist-item recent-entries-item">
+      <div class="urllist-item-inner recent-entries-item-inner">
+        
+          
+          <a href="http://lyncs.hateblo.jp/entry/2020/04/11/103421" class="urllist-title-link recent-entries-title-link  urllist-title recent-entries-title">LYNCSの手引</a>
+
+
+          
+          
+
+                </div>
+    </li>
+  
+    
+    <li class="urllist-item recent-entries-item">
+      <div class="urllist-item-inner recent-entries-item-inner">
+        
+          
+          <a href="http://lyncs.hateblo.jp/entry/2020/03/18/234928" class="urllist-title-link recent-entries-title-link  urllist-title recent-entries-title">【pixiv BOOTH】 LYNCS 刊行物・販売物リスト！</a>
+
+
+          
+          
+
+                </div>
+    </li>
+  
+    
+    <li class="urllist-item recent-entries-item">
+      <div class="urllist-item-inner recent-entries-item-inner">
+        
+          
+          <a href="http://lyncs.hateblo.jp/entry/2019/12/30/221046" class="urllist-title-link recent-entries-title-link  urllist-title recent-entries-title">下田合宿 2019 報告</a>
+
+
+          
+          
+
+                </div>
+    </li>
+  
+    
+    <li class="urllist-item recent-entries-item">
+      <div class="urllist-item-inner recent-entries-item-inner">
+        
+          
+          <a href="http://lyncs.hateblo.jp/entry/2018/03/11/032127" class="urllist-title-link recent-entries-title-link  urllist-title recent-entries-title">2020年版 C言語/C++ 入門者のための環境構築 (Windows編)</a>
+
+
+          
+          
+
+                </div>
+    </li>
+  
+    
+    <li class="urllist-item recent-entries-item">
+      <div class="urllist-item-inner recent-entries-item-inner">
+        
+          
+          <a href="http://lyncs.hateblo.jp/entry/2019/10/16/013717" class="urllist-title-link recent-entries-title-link  urllist-title recent-entries-title">死んでも技術書典では T シャツを売ってはいけないという話（技術書典 7 報告）</a>
+
+
+          
+          
+
+                </div>
+    </li>
+  
+</ul>
+
+      </div>
+</div>
+
+    
+      
+
+<div class="hatena-module hatena-module-category">
+  <div class="hatena-module-title">
+    カテゴリー
+  </div>
+  <div class="hatena-module-body">
+    <ul class="hatena-urllist">
+      
+        <li>
+          <a href="http://lyncs.hateblo.jp/archive/category/%E7%B7%8F%E5%90%88" class="category-総合">
+            総合 (9)
+          </a>
+        </li>
+      
+        <li>
+          <a href="http://lyncs.hateblo.jp/archive/category/HowTo" class="category-HowTo">
+            HowTo (12)
+          </a>
+        </li>
+      
+        <li>
+          <a href="http://lyncs.hateblo.jp/archive/category/%E5%A4%A9%E6%96%87" class="category-天文">
+            天文 (5)
+          </a>
+        </li>
+      
+        <li>
+          <a href="http://lyncs.hateblo.jp/archive/category/%E6%8A%80%E8%A1%93%E6%9B%B8%E5%85%B8" class="category-技術書典">
+            技術書典 (3)
+          </a>
+        </li>
+      
+        <li>
+          <a href="http://lyncs.hateblo.jp/archive/category/%E9%83%A8%E8%AA%8C" class="category-部誌">
+            部誌 (8)
+          </a>
+        </li>
+      
+        <li>
+          <a href="http://lyncs.hateblo.jp/archive/category/%E3%83%87%E3%82%B6%E3%82%A4%E3%83%B3" class="category-デザイン">
+            デザイン (1)
+          </a>
+        </li>
+      
+        <li>
+          <a href="http://lyncs.hateblo.jp/archive/category/%E9%87%8F%E5%AD%90%E6%83%85%E5%A0%B1%E7%A7%91%E5%AD%A6" class="category-量子情報科学">
+            量子情報科学 (2)
+          </a>
+        </li>
+      
+        <li>
+          <a href="http://lyncs.hateblo.jp/archive/category/%E5%AD%A6%E9%83%A8%E5%AD%A6%E7%A7%91%E5%88%A5" class="category-学部学科別">
+            学部学科別 (1)
+          </a>
+        </li>
+      
+        <li>
+          <a href="http://lyncs.hateblo.jp/archive/category/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0" class="category-プログラミング">
+            プログラミング (5)
+          </a>
+        </li>
+      
+        <li>
+          <a href="http://lyncs.hateblo.jp/archive/category/Trello" class="category-Trello">
+            Trello (1)
+          </a>
+        </li>
+      
+        <li>
+          <a href="http://lyncs.hateblo.jp/archive/category/Slack" class="category-Slack">
+            Slack (2)
+          </a>
+        </li>
+      
+        <li>
+          <a href="http://lyncs.hateblo.jp/archive/category/%E6%95%B0%E5%AD%A6" class="category-数学">
+            数学 (3)
+          </a>
+        </li>
+      
+        <li>
+          <a href="http://lyncs.hateblo.jp/archive/category/CanSat" class="category-CanSat">
+            CanSat (1)
+          </a>
+        </li>
+      
+        <li>
+          <a href="http://lyncs.hateblo.jp/archive/category/%E9%9B%BB%E5%AD%90%E5%B7%A5%E4%BD%9C" class="category-電子工作">
+            電子工作 (1)
+          </a>
+        </li>
+      
+        <li>
+          <a href="http://lyncs.hateblo.jp/archive/category/JavaScript" class="category-JavaScript">
+            JavaScript (2)
+          </a>
+        </li>
+      
+        <li>
+          <a href="http://lyncs.hateblo.jp/archive/category/MediaWiki" class="category-MediaWiki">
+            MediaWiki (1)
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+</div>
+
+    
+      
+
+<div class="hatena-module hatena-module-archive" data-archive-type="default" data-archive-url="http://lyncs.hateblo.jp/archive">
+  <div class="hatena-module-title">
+    <a href="http://lyncs.hateblo.jp/archive">月別アーカイブ</a>
+  </div>
+  <div class="hatena-module-body">
+  
+
+  
+    
+    
+      <ul class="hatena-urllist">
+        
+          <li class="archive-module-year archive-module-year-hidden" data-year="2020">
+            <div class="archive-module-button">
+              <span class="archive-module-hide-button">▼</span>
+              <span class="archive-module-show-button">▶</span>
+            </div>
+            <a href="http://lyncs.hateblo.jp/archive/2020" class="archive-module-year-title">
+              2020 (2)
+            </a>
+            <ul class="archive-module-months">
+              
+                <li class="archive-module-month">
+                  <a href="http://lyncs.hateblo.jp/archive/2020/4" class="archive-module-month-title">
+                    2020 / 4 (1)
+                  </a>
+                </li>
+              
+                <li class="archive-module-month">
+                  <a href="http://lyncs.hateblo.jp/archive/2020/3" class="archive-module-month-title">
+                    2020 / 3 (1)
+                  </a>
+                </li>
+              
+            </ul>
+          </li>
+        
+          <li class="archive-module-year" data-year="2019">
+            <div class="archive-module-button">
+              <span class="archive-module-hide-button">▼</span>
+              <span class="archive-module-show-button">▶</span>
+            </div>
+            <a href="http://lyncs.hateblo.jp/archive/2019" class="archive-module-year-title">
+              2019 (7)
+            </a>
+            <ul class="archive-module-months">
+              
+                <li class="archive-module-month">
+                  <a href="http://lyncs.hateblo.jp/archive/2019/12" class="archive-module-month-title">
+                    2019 / 12 (2)
+                  </a>
+                </li>
+              
+                <li class="archive-module-month">
+                  <a href="http://lyncs.hateblo.jp/archive/2019/10" class="archive-module-month-title">
+                    2019 / 10 (1)
+                  </a>
+                </li>
+              
+                <li class="archive-module-month">
+                  <a href="http://lyncs.hateblo.jp/archive/2019/5" class="archive-module-month-title">
+                    2019 / 5 (1)
+                  </a>
+                </li>
+              
+                <li class="archive-module-month">
+                  <a href="http://lyncs.hateblo.jp/archive/2019/3" class="archive-module-month-title">
+                    2019 / 3 (3)
+                  </a>
+                </li>
+              
+            </ul>
+          </li>
+        
+          <li class="archive-module-year archive-module-year-hidden" data-year="2018">
+            <div class="archive-module-button">
+              <span class="archive-module-hide-button">▼</span>
+              <span class="archive-module-show-button">▶</span>
+            </div>
+            <a href="http://lyncs.hateblo.jp/archive/2018" class="archive-module-year-title">
+              2018 (9)
+            </a>
+            <ul class="archive-module-months">
+              
+                <li class="archive-module-month">
+                  <a href="http://lyncs.hateblo.jp/archive/2018/12" class="archive-module-month-title">
+                    2018 / 12 (6)
+                  </a>
+                </li>
+              
+                <li class="archive-module-month">
+                  <a href="http://lyncs.hateblo.jp/archive/2018/11" class="archive-module-month-title">
+                    2018 / 11 (1)
+                  </a>
+                </li>
+              
+                <li class="archive-module-month">
+                  <a href="http://lyncs.hateblo.jp/archive/2018/4" class="archive-module-month-title">
+                    2018 / 4 (1)
+                  </a>
+                </li>
+              
+                <li class="archive-module-month">
+                  <a href="http://lyncs.hateblo.jp/archive/2018/2" class="archive-module-month-title">
+                    2018 / 2 (1)
+                  </a>
+                </li>
+              
+            </ul>
+          </li>
+        
+          <li class="archive-module-year archive-module-year-hidden" data-year="2017">
+            <div class="archive-module-button">
+              <span class="archive-module-hide-button">▼</span>
+              <span class="archive-module-show-button">▶</span>
+            </div>
+            <a href="http://lyncs.hateblo.jp/archive/2017" class="archive-module-year-title">
+              2017 (12)
+            </a>
+            <ul class="archive-module-months">
+              
+                <li class="archive-module-month">
+                  <a href="http://lyncs.hateblo.jp/archive/2017/12" class="archive-module-month-title">
+                    2017 / 12 (1)
+                  </a>
+                </li>
+              
+                <li class="archive-module-month">
+                  <a href="http://lyncs.hateblo.jp/archive/2017/11" class="archive-module-month-title">
+                    2017 / 11 (1)
+                  </a>
+                </li>
+              
+                <li class="archive-module-month">
+                  <a href="http://lyncs.hateblo.jp/archive/2017/9" class="archive-module-month-title">
+                    2017 / 9 (1)
+                  </a>
+                </li>
+              
+                <li class="archive-module-month">
+                  <a href="http://lyncs.hateblo.jp/archive/2017/8" class="archive-module-month-title">
+                    2017 / 8 (1)
+                  </a>
+                </li>
+              
+                <li class="archive-module-month">
+                  <a href="http://lyncs.hateblo.jp/archive/2017/7" class="archive-module-month-title">
+                    2017 / 7 (1)
+                  </a>
+                </li>
+              
+                <li class="archive-module-month">
+                  <a href="http://lyncs.hateblo.jp/archive/2017/6" class="archive-module-month-title">
+                    2017 / 6 (2)
+                  </a>
+                </li>
+              
+                <li class="archive-module-month">
+                  <a href="http://lyncs.hateblo.jp/archive/2017/4" class="archive-module-month-title">
+                    2017 / 4 (1)
+                  </a>
+                </li>
+              
+                <li class="archive-module-month">
+                  <a href="http://lyncs.hateblo.jp/archive/2017/3" class="archive-module-month-title">
+                    2017 / 3 (2)
+                  </a>
+                </li>
+              
+                <li class="archive-module-month">
+                  <a href="http://lyncs.hateblo.jp/archive/2017/1" class="archive-module-month-title">
+                    2017 / 1 (2)
+                  </a>
+                </li>
+              
+            </ul>
+          </li>
+        
+      </ul>
+    
+  
+
+
+</div>
+</div>
+
+    
+      <div class="hatena-module hatena-module-search-box">
+  <div class="hatena-module-title">
+    検索
+  </div>
+  <div class="hatena-module-body">
+    <form class="search-form" role="search" action="http://lyncs.hateblo.jp/search" method="get">
+  <input type="text" name="q" class="search-module-input" value="" placeholder="記事を検索" required="">
+  <input type="submit" value="検索" class="search-module-button">
+</form>
+
+  </div>
+</div>
+
+    
+      
+<div class="hatena-module hatena-module-html">
+    <div class="hatena-module-title">Twitter</div>
+  <div class="hatena-module-body">
+    <iframe id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" class="twitter-timeline twitter-timeline-rendered" style="position: static; visibility: visible; display: inline-block; width: 100%; height: 600px; padding: 0px; border: none; max-width: 100%; min-width: 180px; margin-top: 0px; margin-bottom: 0px; min-height: 200px;" data-widget-id="profile:keio_LYNCS" title="Twitterタイムライン" src="./2020年版 C言語_C++ 入門者のための環境構築 (Windows編) - LYNCSブログ_files/saved_resource(3).html"></iframe> <script async="" src="./2020年版 C言語_C++ 入門者のための環境構築 (Windows編) - LYNCSブログ_files/widgets.js.ダウンロード" charset="utf-8"></script>
+  </div>
+</div>
+
+    
+    
+  </div>
+</aside>
+
+
+  </div>
+</div>
+
+
+
+
+        
+
+        
+  <div id="bottom-editarea">
+    <script src="./2020年版 C言語_C++ 入門者のための環境構築 (Windows編) - LYNCSブログ_files/MathJax.js.ダウンロード" id=""></script>
+<script type="text/x-mathjax-config;executed=true">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      displayMath: [ ['$$','$$'], ["\\[","\\]"] ]
+    }
+  });
+</script>
+  </div>
+
+
+      </div>
+    </div>
+    
+<footer id="footer" data-brand="hatenablog">
+  <div id="footer-inner">
+    
+      <div style="display: block !important;" class="guest-footer js-guide-register test-blogs-register-guide" data-action="guide-register">
+  <div class="guest-footer-content">
+    <h3>はてなブログをはじめよう！</h3>
+    <p>lyncsさんは、はてなブログを使っています。あなたもはてなブログをはじめてみませんか？</p>
+    <div class="guest-footer-btn-container">
+      <div class="guest-footer-btn">
+        <a class="btn btn-register js-inherit-ga" href="http://blog.hatena.ne.jp/register?via=200227" target="_blank">はてなブログをはじめる（無料）</a>
+      </div>
+      <div class="guest-footer-btn">
+        <a href="https://hatenablog.com/guide" target="_blank">はてなブログとは</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+    <address class="footer-address">
+      <a href="http://lyncs.hateblo.jp/">
+        <img src="./2020年版 C言語_C++ 入門者のための環境構築 (Windows編) - LYNCSブログ_files/https___cdn.user.blog.st-hatena.com_custom_blog_icon_129287161_1514226215127674" width="16" height="16" alt="LYNCSブログ">
+        <span class="footer-address-name">LYNCSブログ</span>
+      </a>
+    </address>
+    <p class="services">
+      Powered by <a href="https://hatenablog.com/">Hatena Blog</a>
+      |
+        <a href="https://blog.hatena.ne.jp/-/abuse_report?target_url=http%3A%2F%2Flyncs.hateblo.jp%2Fentry%2F2018%2F03%2F11%2F032127" class="report-abuse-link test-report-abuse-link" target="_blank">ブログを報告する</a>
+    </p>
+  </div>
+</footer>
+
+
+    
+  <script type="text/javascript">!function(d,i){if(!d.getElementById(i)){var j=d.createElement("script");j.id=i;j.src="https://widgets.getpocket.com/v1/j/btn.js?v=1";var w=d.getElementById(i);d.body.appendChild(j);}}(document,"pocket-btn-js");</script><script id="pocket-btn-js" src="./2020年版 C言語_C++ 入門者のための環境構築 (Windows編) - LYNCSブログ_files/btn.js.ダウンロード"></script>
+
+
+    
+  <script src="./2020年版 C言語_C++ 入門者のための環境構築 (Windows編) - LYNCSブログ_files/HatenaStar.js.ダウンロード"></script>
+
+
+    
+      <div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; width: 0px; height: 0px;"><div></div></div></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&appId=719729204785177&version=v2.7";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+    
+    
+
+<div class="quote-box" style="display: none;">
+  <div class="tooltip-quote tooltip-quote-star" style="display: block;">
+    <i class="blogicon-star" title="引用スターをつける"></i>
+  </div>
+  <div class="tooltip-quote tooltip-quote-stock" style="display: block;">
+    <i class="blogicon-quote" title="引用をストック"></i>
+  </div>
+  <div class="tooltip-quote tooltip-quote-tweet js-tooltip-quote-tweet">
+    <a class="js-tweet-quote" target="_blank" data-track-name="quote-tweet" data-track-once=""><i class="blogicon-twitter" title="引用してツイートする"></i></a>
+  </div>
+</div>
+
+<div class="message-box" id="quote-star-message-box" style="display: none; position: absolute;">
+  スターをつけました
+</div>
+
+<div class="quote-stock-panel" id="quote-stock-message-box" style="position: absolute; z-index: 3000">
+  <div class="message-box" id="quote-stock-succeeded-message" style="display: none">
+    <p>引用をストックしました</p>
+    <button class="btn btn-primary" id="quote-stock-show-editor-button" data-track-name="curation-quote-edit-button">ストック一覧を見る</button>
+    <button class="btn quote-stock-close-message-button">閉じる</button>
+  </div>
+
+  <div class="message-box" id="quote-login-required-message" style="display: none">
+    <p>引用するにはまずログインしてください</p>
+    <button class="btn btn-primary" id="quote-login-button">ログイン</button>
+    <button class="btn quote-stock-close-message-button">閉じる</button>
+  </div>
+
+  <div class="error-box" id="quote-stock-failed-message" style="display: none">
+    <p>引用をストックできませんでした。再度お試しください</p>
+    <button class="btn quote-stock-close-message-button">閉じる</button>
+  </div>
+
+  <div class="error-box" id="unstockable-quote-message-box" style="display: none; position: absolute; z-index: 3000;">
+    <p>限定公開記事のため引用できません。</p>
+  </div>
+</div>
+
+<script type="x-underscore-template" id="js-requote-button-template">
+  <div class="requote-button js-requote-button">
+    <button class="requote-button-btn tipsy-top" title="引用する"><i class="blogicon-quote"></i></button>
+  </div>
+</script>
+
+
+
+    
+    <div id="hidden-subscribe-button" style="display: none;">
+      <div class="hatena-follow-button-box btn-subscribe js-hatena-follow-button-box">
+
+  <a href="http://lyncs.hateblo.jp/entry/2018/03/11/032127#" class="hatena-follow-button js-hatena-follow-button unsubscribing">
+    <span class="subscribing">
+      <span class="foreground">読者です</span>
+      <span class="background">読者をやめる</span>
+    </span>
+    <span class="unsubscribing" data-track-name="profile-widget-subscribe-button" data-track-once="">
+      <span class="foreground">読者になる</span>
+      <span class="background">読者になる</span>
+    </span>
+  </a>
+  <div class="subscription-count-box js-subscription-count-box" style="display: block;">
+    <i></i>
+    <u></u>
+    <span class="subscription-count js-subscription-count">17</span>
+  </div>
+</div>
+
+    </div>
+
+    
+  <script type="text/javascript" src="./2020年版 C言語_C++ 入門者のための環境構築 (Windows編) - LYNCSブログ_files/widgets.js.ダウンロード"></script>
+
+<script type="text/javascript" src="./2020年版 C言語_C++ 入門者のための環境構築 (Windows編) - LYNCSブログ_files/bookmark_button.js.ダウンロード" charset="utf-8" async="async"></script>
+
+
+<script type="text/javascript" src="./2020年版 C言語_C++ 入門者のための環境構築 (Windows編) - LYNCSブログ_files/jquery.min.js.ダウンロード"></script>
+<script type="text/javascript" src="./2020年版 C言語_C++ 入門者のための環境構築 (Windows編) - LYNCSブログ_files/jquery-ui.1.10.0.custom.min.js.ダウンロード"></script>
+<script type="text/javascript" src="./2020年版 C言語_C++ 入門者のための環境構築 (Windows編) - LYNCSブログ_files/jquery.flot.js.ダウンロード"></script>
+<script type="text/javascript" src="./2020年版 C言語_C++ 入門者のための環境構築 (Windows編) - LYNCSブログ_files/jquery.flot.time.js.ダウンロード"></script>
+<script id="vendor-js" data-env="production" type="text/javascript" src="./2020年版 C言語_C++ 入門者のための環境構築 (Windows編) - LYNCSブログ_files/vendor.js.ダウンロード" crossorigin="anonymous"></script>
+
+
+
+
+
+<script type="text/javascript" src="./2020年版 C言語_C++ 入門者のための環境構築 (Windows編) - LYNCSブログ_files/texts-ja.js.ダウンロード"></script>
+<script id="hatenablog-js" data-env="production" type="text/javascript" src="./2020年版 C言語_C++ 入門者のための環境構築 (Windows編) - LYNCSブログ_files/hatenablog.js.ダウンロード" crossorigin="anonymous"></script><div style="position: fixed; top: 0px; left: 0px; width: 100%; height: 100%; display: none;"></div>
+
+
+  <script type="text/javascript">Hatena.Diary.GlobalHeader.init()</script>
+
+
+<script src="./2020年版 C言語_C++ 入門者のための環境構築 (Windows編) - LYNCSブログ_files/api.js.ダウンロード" async="" defer=""></script>
+
+
+
+
+
+
+    
+  <script id="valve-dmp" data-service="blog" src="./2020年版 C言語_C++ 入門者のための環境構築 (Windows編) - LYNCSブログ_files/dmp.js.ダウンロード" data-test-id="dmpjs" async=""></script>
+
+
+    
+
+
+
+
+
+  
+
+
+<iframe scrolling="no" frameborder="0" allowtransparency="true" src="./2020年版 C言語_C++ 入門者のための環境構築 (Windows編) - LYNCSブログ_files/widget_iframe.6787510241df65d128e2b60207ad4c25.html" title="Twitter settings iframe" style="display: none;"></iframe><div id="cboxOverlay" style="display: none;"></div><div id="colorbox" class="" role="dialog" tabindex="-1" style="display: none;"><div id="cboxWrapper"><div><div id="cboxTopLeft" style="float: left;"></div><div id="cboxTopCenter" style="float: left;"></div><div id="cboxTopRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxMiddleLeft" style="float: left;"></div><div id="cboxContent" style="float: left;"><div id="cboxTitle" style="float: left;"></div><div id="cboxCurrent" style="float: left;"></div><button type="button" id="cboxPrevious"></button><button type="button" id="cboxNext"></button><button type="button" id="cboxSlideshow"></button><div id="cboxLoadingOverlay" style="float: left;"></div><div id="cboxLoadingGraphic" style="float: left;"></div></div><div id="cboxMiddleRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxBottomLeft" style="float: left;"></div><div id="cboxBottomCenter" style="float: left;"></div><div id="cboxBottomRight" style="float: left;"></div></div></div><div style="position: absolute; width: 9999px; visibility: hidden; display: none; max-width: none;"></div></div><div style="top: -9999px; z-index: -9999;"></div><iframe id="rufous-sandbox" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" style="position: absolute; visibility: hidden; display: none; width: 0px; height: 0px; padding: 0px; border: none;" title="Twitter analytics iframe" src="./2020年版 C言語_C++ 入門者のための環境構築 (Windows編) - LYNCSブログ_files/saved_resource(4).html"></iframe><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8/5+hHgAHggJ/PchI7wAAAABJRU5ErkJggg==" width="1" height="1" border="0" class="bigmining_dmp_beacon" style="display: none;"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8/5+hHgAHggJ/PchI7wAAAABJRU5ErkJggg==" width="1" height="1" border="0" class="bigmining_dmp_beacon" style="display: none;"><img src="./2020年版 C言語_C++ 入門者のための環境構築 (Windows編) - LYNCSブログ_files/adsct" width="1" height="1" border="0" class="bigmining_dmp_beacon" style="display: none;"><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-P5GX4M');</script><div style="color: rgb(0, 0, 0); position: absolute; display: none; z-index: 10002; left: 0px; top: 0px; background-color: rgb(255, 255, 255); border: 0px; padding: 0px; text-align: center;"><div style="text-align: left; margin: 0px; padding: 0px;"></div></div></body></html>
