@@ -181,6 +181,8 @@
       - GR
     command: recdvb --b25 --dev 0 <channel> - -
   ```
+  
+  * 地デジチャンネルの自動取得
   ```
   pi@raspberrypi:~/Downloads $ sudo mirakurun restart
   pi@raspberrypi:~/Downloads $ curl -X PUT "http://localhost:40772/api/config/channels/scan"
